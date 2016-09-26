@@ -60,7 +60,7 @@ static const CGFloat YMSPhotoFetchScaleResizingRatio = 0.75;
     self = [super initWithNibName:NSStringFromClass(self.class) bundle:[NSBundle bundleForClass:self.class]];
     if (self) {
         self.selectedPhotos = [NSMutableArray array];
-        self.numberOfPhotoToSelect = 1;
+        self.numberOfPhotoToSelect = 3;
     }
     return self;
 }

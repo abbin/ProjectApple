@@ -9,8 +9,9 @@
 #import "ViewController.h"
 #import "PANearbyTableViewCell.h"
 #import "PADetailViewController.h"
+#import "UIViewController+YMSPhotoHelper.h"
 
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource,YMSPhotoPickerViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *nearbyTableView;
 
@@ -53,6 +54,10 @@
     else{
         [self.view sendSubviewToBack:self.nearbyTableView];
     }
+}
+
+- (IBAction)add:(id)sender {
+    [self yms_presentAlbumPhotoViewWithDelegate:self];
 }
 
 @end
