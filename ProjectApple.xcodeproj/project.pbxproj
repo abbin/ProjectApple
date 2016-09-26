@@ -18,6 +18,11 @@
 		ED6E832D1D99354100DA54FA /* food-photography-perth3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED6E832B1D99354100DA54FA /* food-photography-perth3.jpg */; };
 		ED6E832E1D99354100DA54FA /* 10376198_740619292643932_6358245269005609953_n (1).jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED6E832C1D99354100DA54FA /* 10376198_740619292643932_6358245269005609953_n (1).jpg */; };
 		ED6E83311D9935EA00DA54FA /* PADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6E83301D9935EA00DA54FA /* PADetailViewController.m */; };
+		ED6E83351D99438C00DA54FA /* PADetailHeadingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6E83331D99438C00DA54FA /* PADetailHeadingTableViewCell.m */; };
+		ED6E83361D99438C00DA54FA /* PADetailHeadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED6E83341D99438C00DA54FA /* PADetailHeadingTableViewCell.xib */; };
+		ED6E833A1D99475D00DA54FA /* FALabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6E83381D99475D00DA54FA /* FALabelTableViewCell.m */; };
+		ED6E833B1D99475D00DA54FA /* FALabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED6E83391D99475D00DA54FA /* FALabelTableViewCell.xib */; };
+		ED6E833E1D994E7900DA54FA /* PAColor.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6E833D1D994E7900DA54FA /* PAColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,14 @@
 		ED6E832C1D99354100DA54FA /* 10376198_740619292643932_6358245269005609953_n (1).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "10376198_740619292643932_6358245269005609953_n (1).jpg"; sourceTree = "<group>"; };
 		ED6E832F1D9935EA00DA54FA /* PADetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PADetailViewController.h; sourceTree = "<group>"; };
 		ED6E83301D9935EA00DA54FA /* PADetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PADetailViewController.m; sourceTree = "<group>"; };
+		ED6E83321D99438C00DA54FA /* PADetailHeadingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PADetailHeadingTableViewCell.h; sourceTree = "<group>"; };
+		ED6E83331D99438C00DA54FA /* PADetailHeadingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PADetailHeadingTableViewCell.m; sourceTree = "<group>"; };
+		ED6E83341D99438C00DA54FA /* PADetailHeadingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PADetailHeadingTableViewCell.xib; sourceTree = "<group>"; };
+		ED6E83371D99475D00DA54FA /* FALabelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FALabelTableViewCell.h; sourceTree = "<group>"; };
+		ED6E83381D99475D00DA54FA /* FALabelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FALabelTableViewCell.m; sourceTree = "<group>"; };
+		ED6E83391D99475D00DA54FA /* FALabelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FALabelTableViewCell.xib; sourceTree = "<group>"; };
+		ED6E833C1D994E7900DA54FA /* PAColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAColor.h; sourceTree = "<group>"; };
+		ED6E833D1D994E7900DA54FA /* PAColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAColor.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +85,8 @@
 			children = (
 				ED6E83121D992FCA00DA54FA /* AppDelegate.h */,
 				ED6E83131D992FCA00DA54FA /* AppDelegate.m */,
+				ED6E833C1D994E7900DA54FA /* PAColor.h */,
+				ED6E833D1D994E7900DA54FA /* PAColor.m */,
 				ED6E83151D992FCA00DA54FA /* ViewController.h */,
 				ED6E83161D992FCA00DA54FA /* ViewController.m */,
 				ED6E832F1D9935EA00DA54FA /* PADetailViewController.h */,
@@ -79,6 +94,12 @@
 				ED6E83261D99320100DA54FA /* PANearbyTableViewCell.h */,
 				ED6E83271D99320100DA54FA /* PANearbyTableViewCell.m */,
 				ED6E83281D99320100DA54FA /* PANearbyTableViewCell.xib */,
+				ED6E83321D99438C00DA54FA /* PADetailHeadingTableViewCell.h */,
+				ED6E83331D99438C00DA54FA /* PADetailHeadingTableViewCell.m */,
+				ED6E83341D99438C00DA54FA /* PADetailHeadingTableViewCell.xib */,
+				ED6E83371D99475D00DA54FA /* FALabelTableViewCell.h */,
+				ED6E83381D99475D00DA54FA /* FALabelTableViewCell.m */,
+				ED6E83391D99475D00DA54FA /* FALabelTableViewCell.xib */,
 				ED6E83181D992FCA00DA54FA /* Main.storyboard */,
 				ED6E831B1D992FCA00DA54FA /* Assets.xcassets */,
 				ED6E831D1D992FCA00DA54FA /* LaunchScreen.storyboard */,
@@ -157,8 +178,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED6E83361D99438C00DA54FA /* PADetailHeadingTableViewCell.xib in Resources */,
 				ED6E831F1D992FCA00DA54FA /* LaunchScreen.storyboard in Resources */,
 				ED6E831C1D992FCA00DA54FA /* Assets.xcassets in Resources */,
+				ED6E833B1D99475D00DA54FA /* FALabelTableViewCell.xib in Resources */,
 				ED6E831A1D992FCA00DA54FA /* Main.storyboard in Resources */,
 				ED6E832E1D99354100DA54FA /* 10376198_740619292643932_6358245269005609953_n (1).jpg in Resources */,
 				ED6E832D1D99354100DA54FA /* food-photography-perth3.jpg in Resources */,
@@ -173,9 +196,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED6E83351D99438C00DA54FA /* PADetailHeadingTableViewCell.m in Sources */,
 				ED6E83171D992FCA00DA54FA /* ViewController.m in Sources */,
 				ED6E83141D992FCA00DA54FA /* AppDelegate.m in Sources */,
 				ED6E83311D9935EA00DA54FA /* PADetailViewController.m in Sources */,
+				ED6E833E1D994E7900DA54FA /* PAColor.m in Sources */,
+				ED6E833A1D99475D00DA54FA /* FALabelTableViewCell.m in Sources */,
 				ED6E83111D992FCA00DA54FA /* main.m in Sources */,
 				ED6E83291D99320100DA54FA /* PANearbyTableViewCell.m in Sources */,
 			);

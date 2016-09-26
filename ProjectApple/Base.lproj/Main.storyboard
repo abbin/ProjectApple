@@ -106,14 +106,28 @@
                                     <constraint firstAttribute="height" constant="64" id="wGV-XX-lJp"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nsc-wW-WGb">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="GON-B9-8A7" id="IaL-Db-iDV"/>
+                                    <outlet property="delegate" destination="GON-B9-8A7" id="e2b-td-Bbo"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="n0a-Kd-0cS" secondAttribute="trailing" id="BKb-Bc-0SN"/>
+                            <constraint firstAttribute="bottom" secondItem="Nsc-wW-WGb" secondAttribute="bottom" id="BQh-GI-SaZ"/>
+                            <constraint firstAttribute="trailing" secondItem="Nsc-wW-WGb" secondAttribute="trailing" id="E0h-aG-OZI"/>
                             <constraint firstItem="n0a-Kd-0cS" firstAttribute="leading" secondItem="eK8-MO-Nbf" secondAttribute="leading" id="LIf-7O-G1x"/>
                             <constraint firstItem="n0a-Kd-0cS" firstAttribute="top" secondItem="T9n-Tq-fAw" secondAttribute="bottom" id="QMj-HD-MD1"/>
+                            <constraint firstItem="Nsc-wW-WGb" firstAttribute="leading" secondItem="eK8-MO-Nbf" secondAttribute="leading" id="gn9-Fa-DhM"/>
+                            <constraint firstItem="Nsc-wW-WGb" firstAttribute="top" secondItem="eK8-MO-Nbf" secondAttribute="top" id="pWs-T6-gjw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="detailTableview" destination="Nsc-wW-WGb" id="ozC-Ac-vCC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VpP-2q-ORN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
