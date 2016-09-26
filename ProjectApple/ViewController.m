@@ -20,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.nearbyTableView setContentInset:UIEdgeInsetsMake(86, 0, 0, 0)];
+    [self.nearbyTableView setContentInset:UIEdgeInsetsMake(70, 0, 0, 0)];
     [self.nearbyTableView setEstimatedRowHeight:286];
     [self.nearbyTableView setRowHeight:UITableViewAutomaticDimension];
     [self.nearbyTableView registerNib:[UINib nibWithNibName:@"PANearbyTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"PANearbyTableViewCell"];
@@ -43,6 +43,16 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     PADetailViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PADetailViewController"];
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    NSLog(@"%f",scrollView.contentOffset.y);
+    if (scrollView.contentOffset.y > -70) {
+        [self.view bringSubviewToFront:self.nearbyTableView];
+    }
+    else{
+        [self.view sendSubviewToBack:self.nearbyTableView];
+    }
 }
 
 @end

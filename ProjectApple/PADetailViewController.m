@@ -10,6 +10,9 @@
 #import "PADetailHeadingTableViewCell.h"
 #import "FALabelTableViewCell.h"
 #import "PAColor.h"
+#import "PACollectionTableViewCell.h"
+#import "PAWorkingHoursTableViewCell.h"
+#import "PAReviewTableViewCell.h"
 
 @interface PADetailViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -21,20 +24,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    for (NSString* family in [UIFont familyNames])
-    {
-        NSLog(@"%@", family);
-        
-        for (NSString* name in [UIFont fontNamesForFamilyName: family])
-        {
-            NSLog(@"  %@", name);
-        }
-    }
-    [self.detailTableview setContentInset:UIEdgeInsetsMake(86, 0, 0, 0)];
+    [self.detailTableview setContentInset:UIEdgeInsetsMake(70, 0, 0, 0)];
     [self.detailTableview setEstimatedRowHeight:286];
     [self.detailTableview setRowHeight:UITableViewAutomaticDimension];
     [self.detailTableview registerNib:[UINib nibWithNibName:@"PADetailHeadingTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"PADetailHeadingTableViewCell"];
     [self.detailTableview registerNib:[UINib nibWithNibName:@"FALabelTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"FALabelTableViewCell"];
+    [self.detailTableview registerNib:[UINib nibWithNibName:@"PACollectionTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"PACollectionTableViewCell"];
+    [self.detailTableview registerNib:[UINib nibWithNibName:@"PAWorkingHoursTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"PAWorkingHoursTableViewCell"];
+    [self.detailTableview registerNib:[UINib nibWithNibName:@"PAReviewTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"PAReviewTableViewCell"];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -42,7 +39,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 4;
+    return 11;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -60,7 +57,6 @@
     else if (indexPath.row == 2){
         FALabelTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FALabelTableViewCell"];
         cell.cellLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:15];
-        cell.cellLabel.textColor = [UIColor colorWithWhite:0 alpha:1];
         cell.cellLabel.text = @"₹ 25";
         return cell;
     }
@@ -82,8 +78,54 @@
 
         return cell;
     }
+    else if (indexPath.row == 4){
+        PACollectionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PACollectionTableViewCell"];
+        return cell;
+    }
+    else if (indexPath.row == 5){
+        FALabelTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FALabelTableViewCell"];
+        cell.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1];
+        cell.cellLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:15];
+        cell.cellLabel.text = @"Reviews";
+        return cell;
+    }
+    else if (indexPath.row == 6){
+        PAReviewTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PAReviewTableViewCell"];
+        return cell;
+    }
+    else if (indexPath.row == 7){
+        PAReviewTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PAReviewTableViewCell"];
+        return cell;
+    }
+    else if (indexPath.row == 8){
+        FALabelTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FALabelTableViewCell"];
+        cell.cellLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:15];
+        cell.cellLabel.text = @"Read All Reviews";
+        cell.cellLabel.textAlignment = NSTextAlignmentRight;
+        return cell;
+    }
+    else if (indexPath.row == 9){
+        FALabelTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FALabelTableViewCell"];
+        cell.backgroundColor = [UIColor colorWithWhite:0.95 alpha:1];
+        cell.cellLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:15];
+        cell.cellLabel.text = @"Working Hours";
+        return cell;
+    }
+    else if (indexPath.row == 10){
+        PAWorkingHoursTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PAWorkingHoursTableViewCell"];
+        return cell;
+    }
     else{
         return nil;
+    }
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    if (scrollView.contentOffset.y > -70) {
+        [self.view bringSubviewToFront:self.detailTableview];
+    }
+    else{
+        [self.view sendSubviewToBack:self.detailTableview];
     }
 }
 

@@ -1,24 +1,18 @@
 //
-//  FALabelTableViewCell.m
+//  PAWorkingHoursTableViewCell.m
 //  ProjectApple
 //
 //  Created by Abbin Varghese on 26/09/16.
 //  Copyright © 2016 ABN. All rights reserved.
 //
 
-#import "FALabelTableViewCell.h"
+#import "PAWorkingHoursTableViewCell.h"
 
-@implementation FALabelTableViewCell
+@implementation PAWorkingHoursTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-}
-
--(void)prepareForReuse{
-    self.cellLabel.textAlignment = NSTextAlignmentLeft;
-    self.backgroundColor = [UIColor whiteColor];
-    self.cellLabel.textColor = [UIColor blackColor];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

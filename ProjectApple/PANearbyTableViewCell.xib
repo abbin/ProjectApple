@@ -43,6 +43,7 @@
                         </constraints>
                     </imageView>
                 </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="cl1-BJ-7T0" firstAttribute="leading" secondItem="wUs-gv-AeY" secondAttribute="trailing" constant="8" id="2hN-Lk-X0Y"/>
                     <constraint firstAttribute="trailingMargin" secondItem="yGP-gy-jb8" secondAttribute="trailing" constant="8" id="69X-7y-Nch"/>

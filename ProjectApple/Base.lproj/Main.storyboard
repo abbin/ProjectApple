@@ -26,6 +26,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0H-65-fCg">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="lZB-qe-3og"/>
                                 </constraints>
@@ -92,7 +93,7 @@
                                         <state key="highlighted" image="backSelected"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="DbF-yx-NM2" firstAttribute="centerY" secondItem="n0a-Kd-0cS" secondAttribute="centerY" id="7Ju-Gg-547"/>
                                     <constraint firstAttribute="trailing" secondItem="U3h-hf-oVh" secondAttribute="trailing" constant="8" id="DCI-IP-lg2"/>

@@ -23,6 +23,14 @@
 		ED6E833A1D99475D00DA54FA /* FALabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6E83381D99475D00DA54FA /* FALabelTableViewCell.m */; };
 		ED6E833B1D99475D00DA54FA /* FALabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED6E83391D99475D00DA54FA /* FALabelTableViewCell.xib */; };
 		ED6E833E1D994E7900DA54FA /* PAColor.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6E833D1D994E7900DA54FA /* PAColor.m */; };
+		ED6E83421D994F7400DA54FA /* PACollectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6E83401D994F7400DA54FA /* PACollectionTableViewCell.m */; };
+		ED6E83431D994F7400DA54FA /* PACollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED6E83411D994F7400DA54FA /* PACollectionTableViewCell.xib */; };
+		ED6E83471D9952D400DA54FA /* PAImageViewCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6E83451D9952D400DA54FA /* PAImageViewCollectionViewCell.m */; };
+		ED6E83481D9952D400DA54FA /* PAImageViewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED6E83461D9952D400DA54FA /* PAImageViewCollectionViewCell.xib */; };
+		ED6E834C1D9957B500DA54FA /* PAWorkingHoursTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6E834A1D9957B500DA54FA /* PAWorkingHoursTableViewCell.m */; };
+		ED6E834D1D9957B500DA54FA /* PAWorkingHoursTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED6E834B1D9957B500DA54FA /* PAWorkingHoursTableViewCell.xib */; };
+		ED6E83511D995B6600DA54FA /* PAReviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6E834F1D995B6600DA54FA /* PAReviewTableViewCell.m */; };
+		ED6E83521D995B6600DA54FA /* PAReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED6E83501D995B6600DA54FA /* PAReviewTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +59,18 @@
 		ED6E83391D99475D00DA54FA /* FALabelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FALabelTableViewCell.xib; sourceTree = "<group>"; };
 		ED6E833C1D994E7900DA54FA /* PAColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAColor.h; sourceTree = "<group>"; };
 		ED6E833D1D994E7900DA54FA /* PAColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAColor.m; sourceTree = "<group>"; };
+		ED6E833F1D994F7400DA54FA /* PACollectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PACollectionTableViewCell.h; sourceTree = "<group>"; };
+		ED6E83401D994F7400DA54FA /* PACollectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PACollectionTableViewCell.m; sourceTree = "<group>"; };
+		ED6E83411D994F7400DA54FA /* PACollectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PACollectionTableViewCell.xib; sourceTree = "<group>"; };
+		ED6E83441D9952D400DA54FA /* PAImageViewCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAImageViewCollectionViewCell.h; sourceTree = "<group>"; };
+		ED6E83451D9952D400DA54FA /* PAImageViewCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAImageViewCollectionViewCell.m; sourceTree = "<group>"; };
+		ED6E83461D9952D400DA54FA /* PAImageViewCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PAImageViewCollectionViewCell.xib; sourceTree = "<group>"; };
+		ED6E83491D9957B500DA54FA /* PAWorkingHoursTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAWorkingHoursTableViewCell.h; sourceTree = "<group>"; };
+		ED6E834A1D9957B500DA54FA /* PAWorkingHoursTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAWorkingHoursTableViewCell.m; sourceTree = "<group>"; };
+		ED6E834B1D9957B500DA54FA /* PAWorkingHoursTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PAWorkingHoursTableViewCell.xib; sourceTree = "<group>"; };
+		ED6E834E1D995B6600DA54FA /* PAReviewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAReviewTableViewCell.h; sourceTree = "<group>"; };
+		ED6E834F1D995B6600DA54FA /* PAReviewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAReviewTableViewCell.m; sourceTree = "<group>"; };
+		ED6E83501D995B6600DA54FA /* PAReviewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PAReviewTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +120,18 @@
 				ED6E83371D99475D00DA54FA /* FALabelTableViewCell.h */,
 				ED6E83381D99475D00DA54FA /* FALabelTableViewCell.m */,
 				ED6E83391D99475D00DA54FA /* FALabelTableViewCell.xib */,
+				ED6E833F1D994F7400DA54FA /* PACollectionTableViewCell.h */,
+				ED6E83401D994F7400DA54FA /* PACollectionTableViewCell.m */,
+				ED6E83411D994F7400DA54FA /* PACollectionTableViewCell.xib */,
+				ED6E83441D9952D400DA54FA /* PAImageViewCollectionViewCell.h */,
+				ED6E83451D9952D400DA54FA /* PAImageViewCollectionViewCell.m */,
+				ED6E83461D9952D400DA54FA /* PAImageViewCollectionViewCell.xib */,
+				ED6E83491D9957B500DA54FA /* PAWorkingHoursTableViewCell.h */,
+				ED6E834A1D9957B500DA54FA /* PAWorkingHoursTableViewCell.m */,
+				ED6E834B1D9957B500DA54FA /* PAWorkingHoursTableViewCell.xib */,
+				ED6E834E1D995B6600DA54FA /* PAReviewTableViewCell.h */,
+				ED6E834F1D995B6600DA54FA /* PAReviewTableViewCell.m */,
+				ED6E83501D995B6600DA54FA /* PAReviewTableViewCell.xib */,
 				ED6E83181D992FCA00DA54FA /* Main.storyboard */,
 				ED6E831B1D992FCA00DA54FA /* Assets.xcassets */,
 				ED6E831D1D992FCA00DA54FA /* LaunchScreen.storyboard */,
@@ -182,9 +214,13 @@
 				ED6E831F1D992FCA00DA54FA /* LaunchScreen.storyboard in Resources */,
 				ED6E831C1D992FCA00DA54FA /* Assets.xcassets in Resources */,
 				ED6E833B1D99475D00DA54FA /* FALabelTableViewCell.xib in Resources */,
+				ED6E83521D995B6600DA54FA /* PAReviewTableViewCell.xib in Resources */,
 				ED6E831A1D992FCA00DA54FA /* Main.storyboard in Resources */,
 				ED6E832E1D99354100DA54FA /* 10376198_740619292643932_6358245269005609953_n (1).jpg in Resources */,
+				ED6E83481D9952D400DA54FA /* PAImageViewCollectionViewCell.xib in Resources */,
 				ED6E832D1D99354100DA54FA /* food-photography-perth3.jpg in Resources */,
+				ED6E83431D994F7400DA54FA /* PACollectionTableViewCell.xib in Resources */,
+				ED6E834D1D9957B500DA54FA /* PAWorkingHoursTableViewCell.xib in Resources */,
 				ED6E832A1D99320100DA54FA /* PANearbyTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,9 +237,13 @@
 				ED6E83141D992FCA00DA54FA /* AppDelegate.m in Sources */,
 				ED6E83311D9935EA00DA54FA /* PADetailViewController.m in Sources */,
 				ED6E833E1D994E7900DA54FA /* PAColor.m in Sources */,
+				ED6E834C1D9957B500DA54FA /* PAWorkingHoursTableViewCell.m in Sources */,
 				ED6E833A1D99475D00DA54FA /* FALabelTableViewCell.m in Sources */,
 				ED6E83111D992FCA00DA54FA /* main.m in Sources */,
+				ED6E83511D995B6600DA54FA /* PAReviewTableViewCell.m in Sources */,
 				ED6E83291D99320100DA54FA /* PANearbyTableViewCell.m in Sources */,
+				ED6E83471D9952D400DA54FA /* PAImageViewCollectionViewCell.m in Sources */,
+				ED6E83421D994F7400DA54FA /* PACollectionTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
