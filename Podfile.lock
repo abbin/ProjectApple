@@ -1,0 +1,19 @@
+PODS:
+  - CHTCollectionViewWaterfallLayout (0.9.5):
+    - CHTCollectionViewWaterfallLayout/ObjC (= 0.9.5)
+  - CHTCollectionViewWaterfallLayout/ObjC (0.9.5)
+  - YangMingShan (1.2.2):
+    - YangMingShan/YMSPhotoPicker (= 1.2.2)
+  - YangMingShan/YMSPhotoPicker (1.2.2)
+
+DEPENDENCIES:
+  - CHTCollectionViewWaterfallLayout
+  - YangMingShan
+
+SPEC CHECKSUMS:
+  CHTCollectionViewWaterfallLayout: 775ff73f48cfc13859b62d8bceb96e772e4a0318
+  YangMingShan: aecb8b3099624da18f1d416839a2769d3394a140
+
+PODFILE CHECKSUM: 7848fd6f9efd11bb253b58e0299a7d23f2bab66d
+
+COCOAPODS: 1.0.1

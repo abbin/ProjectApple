@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C0A263D4947C9E892868DAE /* libPods-ProjectApple.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE5459B2D7D020B1CC14E14 /* libPods-ProjectApple.a */; };
 		ED6E83111D992FCA00DA54FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6E83101D992FCA00DA54FA /* main.m */; };
 		ED6E83141D992FCA00DA54FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6E83131D992FCA00DA54FA /* AppDelegate.m */; };
 		ED6E83171D992FCA00DA54FA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6E83161D992FCA00DA54FA /* ViewController.m */; };
@@ -34,6 +35,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD79EEE4509C55D928134D48 /* Pods-ProjectApple.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectApple.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectApple/Pods-ProjectApple.debug.xcconfig"; sourceTree = "<group>"; };
+		BFE5459B2D7D020B1CC14E14 /* libPods-ProjectApple.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ProjectApple.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEA7C9DFF3B0739816751E21 /* Pods-ProjectApple.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectApple.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectApple/Pods-ProjectApple.release.xcconfig"; sourceTree = "<group>"; };
 		ED6E830C1D992FCA00DA54FA /* ProjectApple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectApple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6E83101D992FCA00DA54FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ED6E83121D992FCA00DA54FA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,17 +82,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C0A263D4947C9E892868DAE /* libPods-ProjectApple.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2861B4954E724216AB8EB277 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFE5459B2D7D020B1CC14E14 /* libPods-ProjectApple.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		960C3262A7106DD2B70B609E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD79EEE4509C55D928134D48 /* Pods-ProjectApple.debug.xcconfig */,
+				DEA7C9DFF3B0739816751E21 /* Pods-ProjectApple.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		ED6E83031D992FCA00DA54FA = {
 			isa = PBXGroup;
 			children = (
 				ED6E830E1D992FCA00DA54FA /* ProjectApple */,
 				ED6E830D1D992FCA00DA54FA /* Products */,
+				960C3262A7106DD2B70B609E /* Pods */,
+				2861B4954E724216AB8EB277 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,9 +182,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED6E83231D992FCA00DA54FA /* Build configuration list for PBXNativeTarget "ProjectApple" */;
 			buildPhases = (
+				0F81AE0F5D93F49016717D33 /* [CP] Check Pods Manifest.lock */,
 				ED6E83081D992FCA00DA54FA /* Sources */,
 				ED6E83091D992FCA00DA54FA /* Frameworks */,
 				ED6E830A1D992FCA00DA54FA /* Resources */,
+				C4405BBA804ADBEC8FFDE4B2 /* [CP] Embed Pods Frameworks */,
+				3B46D6AD435D4868FCCD3C32 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,6 +253,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F81AE0F5D93F49016717D33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3B46D6AD435D4868FCCD3C32 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProjectApple/Pods-ProjectApple-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4405BBA804ADBEC8FFDE4B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProjectApple/Pods-ProjectApple-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ED6E83081D992FCA00DA54FA /* Sources */ = {
@@ -359,6 +434,7 @@
 		};
 		ED6E83241D992FCA00DA54FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD79EEE4509C55D928134D48 /* Pods-ProjectApple.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EDXP6Y48QS;
@@ -372,6 +448,7 @@
 		};
 		ED6E83251D992FCA00DA54FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEA7C9DFF3B0739816751E21 /* Pods-ProjectApple.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EDXP6Y48QS;
@@ -402,6 +479,7 @@
 				ED6E83251D992FCA00DA54FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
