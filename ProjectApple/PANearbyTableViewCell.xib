@@ -27,12 +27,14 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Main Chicko" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qn-0V-TdM">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="The Main Chicko" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qn-0V-TdM">
+                        <frame key="frameInset" width="1000" height="1000"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chiyang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqP-ec-2Pn">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Chiyang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqP-ec-2Pn">
+                        <frame key="frameInset" width="1000" height="1000"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -46,9 +48,9 @@
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="cl1-BJ-7T0" firstAttribute="leading" secondItem="wUs-gv-AeY" secondAttribute="trailing" constant="8" id="2hN-Lk-X0Y"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="yGP-gy-jb8" secondAttribute="trailing" constant="8" id="69X-7y-Nch"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="yGP-gy-jb8" secondAttribute="trailing" id="69X-7y-Nch"/>
                     <constraint firstItem="1Qn-0V-TdM" firstAttribute="top" secondItem="wUs-gv-AeY" secondAttribute="bottom" constant="8" id="7EX-ld-UGi"/>
-                    <constraint firstItem="yGP-gy-jb8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="95D-Z8-n8s"/>
+                    <constraint firstItem="yGP-gy-jb8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="95D-Z8-n8s"/>
                     <constraint firstItem="wUs-gv-AeY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="HoT-9O-ja1"/>
                     <constraint firstAttribute="bottomMargin" secondItem="yGP-gy-jb8" secondAttribute="bottom" constant="8" id="PAq-BG-31r"/>
                     <constraint firstItem="lqP-ec-2Pn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="R7s-hN-Bov"/>
