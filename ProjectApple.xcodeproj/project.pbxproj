@@ -13,6 +13,11 @@
 		ED6E831A1D992FCA00DA54FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED6E83181D992FCA00DA54FA /* Main.storyboard */; };
 		ED6E831C1D992FCA00DA54FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED6E831B1D992FCA00DA54FA /* Assets.xcassets */; };
 		ED6E831F1D992FCA00DA54FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED6E831D1D992FCA00DA54FA /* LaunchScreen.storyboard */; };
+		ED6E83291D99320100DA54FA /* PANearbyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6E83271D99320100DA54FA /* PANearbyTableViewCell.m */; };
+		ED6E832A1D99320100DA54FA /* PANearbyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED6E83281D99320100DA54FA /* PANearbyTableViewCell.xib */; };
+		ED6E832D1D99354100DA54FA /* food-photography-perth3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED6E832B1D99354100DA54FA /* food-photography-perth3.jpg */; };
+		ED6E832E1D99354100DA54FA /* 10376198_740619292643932_6358245269005609953_n (1).jpg in Resources */ = {isa = PBXBuildFile; fileRef = ED6E832C1D99354100DA54FA /* 10376198_740619292643932_6358245269005609953_n (1).jpg */; };
+		ED6E83311D9935EA00DA54FA /* PADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6E83301D9935EA00DA54FA /* PADetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,13 @@
 		ED6E831B1D992FCA00DA54FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED6E831E1D992FCA00DA54FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED6E83201D992FCA00DA54FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED6E83261D99320100DA54FA /* PANearbyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PANearbyTableViewCell.h; sourceTree = "<group>"; };
+		ED6E83271D99320100DA54FA /* PANearbyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PANearbyTableViewCell.m; sourceTree = "<group>"; };
+		ED6E83281D99320100DA54FA /* PANearbyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PANearbyTableViewCell.xib; sourceTree = "<group>"; };
+		ED6E832B1D99354100DA54FA /* food-photography-perth3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "food-photography-perth3.jpg"; sourceTree = "<group>"; };
+		ED6E832C1D99354100DA54FA /* 10376198_740619292643932_6358245269005609953_n (1).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "10376198_740619292643932_6358245269005609953_n (1).jpg"; sourceTree = "<group>"; };
+		ED6E832F1D9935EA00DA54FA /* PADetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PADetailViewController.h; sourceTree = "<group>"; };
+		ED6E83301D9935EA00DA54FA /* PADetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PADetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +74,17 @@
 				ED6E83131D992FCA00DA54FA /* AppDelegate.m */,
 				ED6E83151D992FCA00DA54FA /* ViewController.h */,
 				ED6E83161D992FCA00DA54FA /* ViewController.m */,
+				ED6E832F1D9935EA00DA54FA /* PADetailViewController.h */,
+				ED6E83301D9935EA00DA54FA /* PADetailViewController.m */,
+				ED6E83261D99320100DA54FA /* PANearbyTableViewCell.h */,
+				ED6E83271D99320100DA54FA /* PANearbyTableViewCell.m */,
+				ED6E83281D99320100DA54FA /* PANearbyTableViewCell.xib */,
 				ED6E83181D992FCA00DA54FA /* Main.storyboard */,
 				ED6E831B1D992FCA00DA54FA /* Assets.xcassets */,
 				ED6E831D1D992FCA00DA54FA /* LaunchScreen.storyboard */,
 				ED6E83201D992FCA00DA54FA /* Info.plist */,
+				ED6E832B1D99354100DA54FA /* food-photography-perth3.jpg */,
+				ED6E832C1D99354100DA54FA /* 10376198_740619292643932_6358245269005609953_n (1).jpg */,
 				ED6E830F1D992FCA00DA54FA /* Supporting Files */,
 			);
 			path = ProjectApple;
@@ -141,6 +160,9 @@
 				ED6E831F1D992FCA00DA54FA /* LaunchScreen.storyboard in Resources */,
 				ED6E831C1D992FCA00DA54FA /* Assets.xcassets in Resources */,
 				ED6E831A1D992FCA00DA54FA /* Main.storyboard in Resources */,
+				ED6E832E1D99354100DA54FA /* 10376198_740619292643932_6358245269005609953_n (1).jpg in Resources */,
+				ED6E832D1D99354100DA54FA /* food-photography-perth3.jpg in Resources */,
+				ED6E832A1D99320100DA54FA /* PANearbyTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,7 +175,9 @@
 			files = (
 				ED6E83171D992FCA00DA54FA /* ViewController.m in Sources */,
 				ED6E83141D992FCA00DA54FA /* AppDelegate.m in Sources */,
+				ED6E83311D9935EA00DA54FA /* PADetailViewController.m in Sources */,
 				ED6E83111D992FCA00DA54FA /* main.m in Sources */,
+				ED6E83291D99320100DA54FA /* PANearbyTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +297,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EDXP6Y48QS;
 				INFOPLIST_FILE = ProjectApple/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abn.ProjectApple;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -285,6 +310,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EDXP6Y48QS;
 				INFOPLIST_FILE = ProjectApple/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abn.ProjectApple;
 				PRODUCT_NAME = "$(TARGET_NAME)";

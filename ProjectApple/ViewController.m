@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "PANearbyTableViewCell.h"
+#import "PADetailViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *nearbyTableView;
 
 @end
 
@@ -16,14 +20,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self.nearbyTableView setContentInset:UIEdgeInsetsMake(86, 0, 0, 0)];
+    [self.nearbyTableView setEstimatedRowHeight:286];
+    [self.nearbyTableView setRowHeight:UITableViewAutomaticDimension];
+    [self.nearbyTableView registerNib:[UINib nibWithNibName:@"PANearbyTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"PANearbyTableViewCell"];
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
 }
 
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 5;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    PANearbyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PANearbyTableViewCell"];
+    return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    PADetailViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PADetailViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 @end
