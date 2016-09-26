@@ -14,7 +14,7 @@
 #import "PAWorkingHoursTableViewCell.h"
 #import "PAReviewTableViewCell.h"
 
-@interface PADetailViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface PADetailViewController ()<UITableViewDataSource,UITableViewDelegate,UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *detailTableview;
 
@@ -24,6 +24,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.navigationController.interactivePopGestureRecognizer setDelegate:self];
+    
     [self.detailTableview setContentInset:UIEdgeInsetsMake(70, 0, 0, 0)];
     [self.detailTableview setEstimatedRowHeight:286];
     [self.detailTableview setRowHeight:UITableViewAutomaticDimension];
@@ -32,6 +35,10 @@
     [self.detailTableview registerNib:[UINib nibWithNibName:@"PACollectionTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"PACollectionTableViewCell"];
     [self.detailTableview registerNib:[UINib nibWithNibName:@"PAWorkingHoursTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"PAWorkingHoursTableViewCell"];
     [self.detailTableview registerNib:[UINib nibWithNibName:@"PAReviewTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"PAReviewTableViewCell"];
+}
+
+-(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
+    return YES;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

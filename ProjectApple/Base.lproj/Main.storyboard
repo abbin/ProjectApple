@@ -3,7 +3,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,22 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropDown" translatesAutoresizingMaskIntoConstraints="NO" id="iX3-gm-rNd">
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="iX3-gm-rNd" secondAttribute="height" multiplier="1:1" id="nFl-Ql-Lk7"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0H-65-fCg">
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="lZB-qe-3og"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
-                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
-                                <state key="normal" title="Nearby">
-                                    <color key="titleColor" white="0.0" alpha="0.54070581896551728" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bgh-xo-vqt">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -43,18 +26,53 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="co6-uR-39b"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UyG-W4-iIl">
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropDown" translatesAutoresizingMaskIntoConstraints="NO" id="iX3-gm-rNd">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="iX3-gm-rNd" secondAttribute="height" multiplier="1:1" id="x8r-GR-x3N"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yv2-4R-5b8">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="yv2-4R-5b8" secondAttribute="height" multiplier="1:1" id="9Kx-XN-M3M"/>
+                                        </constraints>
+                                        <state key="normal" image="plus"/>
+                                        <state key="highlighted" image="plusSelected"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0H-65-fCg">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="Nearby">
+                                            <color key="titleColor" white="0.0" alpha="0.54070581896551728" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="iX3-gm-rNd" firstAttribute="height" secondItem="b0H-65-fCg" secondAttribute="height" multiplier="0.1" id="0y4-Hg-pxy"/>
+                                    <constraint firstItem="b0H-65-fCg" firstAttribute="top" secondItem="UyG-W4-iIl" secondAttribute="top" id="3p5-3H-idv"/>
+                                    <constraint firstAttribute="bottom" secondItem="b0H-65-fCg" secondAttribute="bottom" id="6ck-Qb-84i"/>
+                                    <constraint firstItem="iX3-gm-rNd" firstAttribute="centerY" secondItem="b0H-65-fCg" secondAttribute="centerY" id="8cI-IP-G2O"/>
+                                    <constraint firstAttribute="trailing" secondItem="yv2-4R-5b8" secondAttribute="trailing" constant="8" id="Acf-no-u5u"/>
+                                    <constraint firstItem="iX3-gm-rNd" firstAttribute="trailing" secondItem="b0H-65-fCg" secondAttribute="trailing" id="CMN-KY-F70"/>
+                                    <constraint firstAttribute="height" constant="64" id="MCi-rd-thp"/>
+                                    <constraint firstItem="b0H-65-fCg" firstAttribute="leading" secondItem="UyG-W4-iIl" secondAttribute="leading" constant="15" id="NWC-UY-Wz0"/>
+                                    <constraint firstItem="yv2-4R-5b8" firstAttribute="height" secondItem="UyG-W4-iIl" secondAttribute="height" multiplier="0.6" id="jke-d3-0Jw"/>
+                                    <constraint firstItem="yv2-4R-5b8" firstAttribute="centerY" secondItem="UyG-W4-iIl" secondAttribute="centerY" id="kqD-IC-STb"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="bgh-xo-vqt" secondAttribute="bottom" id="9ya-qz-dAy"/>
-                            <constraint firstItem="bgh-xo-vqt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="C9u-Gx-nX4"/>
-                            <constraint firstAttribute="trailing" secondItem="bgh-xo-vqt" secondAttribute="trailing" id="K4y-fB-0p5"/>
-                            <constraint firstItem="iX3-gm-rNd" firstAttribute="height" secondItem="b0H-65-fCg" secondAttribute="height" multiplier="0.1" id="Mv5-3B-MUR"/>
-                            <constraint firstItem="b0H-65-fCg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Njc-h1-fAd"/>
-                            <constraint firstItem="b0H-65-fCg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="QwI-Wh-FbS"/>
-                            <constraint firstItem="iX3-gm-rNd" firstAttribute="centerY" secondItem="b0H-65-fCg" secondAttribute="centerY" id="Yqg-0b-sUs"/>
-                            <constraint firstItem="iX3-gm-rNd" firstAttribute="trailing" secondItem="b0H-65-fCg" secondAttribute="trailing" id="h9L-vV-pDC"/>
-                            <constraint firstItem="bgh-xo-vqt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zBS-Wr-BX6"/>
+                            <constraint firstAttribute="trailing" secondItem="UyG-W4-iIl" secondAttribute="trailing" id="5x3-Hp-UfS"/>
+                            <constraint firstAttribute="trailing" secondItem="bgh-xo-vqt" secondAttribute="trailing" id="AsP-Sy-6uT"/>
+                            <constraint firstAttribute="bottom" secondItem="bgh-xo-vqt" secondAttribute="bottom" id="BCY-ZN-bNF"/>
+                            <constraint firstItem="UyG-W4-iIl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="F06-gO-MPL"/>
+                            <constraint firstItem="bgh-xo-vqt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UCt-5U-G2I"/>
+                            <constraint firstItem="UyG-W4-iIl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UMx-37-d8P"/>
+                            <constraint firstItem="bgh-xo-vqt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fc2-Ae-KTB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qtd-VD-6Ts"/>
@@ -78,6 +96,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nsc-wW-WGb">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="GON-B9-8A7" id="IaL-Db-iDV"/>
+                                    <outlet property="delegate" destination="GON-B9-8A7" id="e2b-td-Bbo"/>
+                                </connections>
+                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0a-Kd-0cS">
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3h-hf-oVh">
@@ -107,13 +132,6 @@
                                     <constraint firstAttribute="height" constant="64" id="wGV-XX-lJp"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nsc-wW-WGb">
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="GON-B9-8A7" id="IaL-Db-iDV"/>
-                                    <outlet property="delegate" destination="GON-B9-8A7" id="e2b-td-Bbo"/>
-                                </connections>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -161,5 +179,7 @@
         <image name="dropDown" width="17" height="17"/>
         <image name="navigation" width="38" height="38"/>
         <image name="navigationSelected" width="38" height="38"/>
+        <image name="plus" width="38" height="38"/>
+        <image name="plusSelected" width="38" height="38"/>
     </resources>
 </document>
