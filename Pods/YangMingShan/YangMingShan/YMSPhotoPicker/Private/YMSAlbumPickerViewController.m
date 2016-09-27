@@ -24,10 +24,7 @@ static const CGFloat YMSNavigationBarOriginalTopSpace = 0.0;
 @property (nonatomic, strong) NSDictionary *selectedCollectionItem;
 @property (nonatomic, strong) NSArray *collectionItems;
 @property (nonatomic, strong) PHCachingImageManager *imageManager;
-@property (nonatomic, weak) IBOutlet UINavigationBar *navigationBar;
-@property (nonatomic, weak) IBOutlet UIView *navigationBarBackgroundView;
 @property (nonatomic, weak) IBOutlet UITableView *albumListTableView;
-@property (nonatomic, weak) IBOutlet NSLayoutConstraint *navigationBarTopLayoutConstraint;
 @property (nonatomic, strong) UIView *footerView;
 @property (nonatomic, assign) CGFloat footerViewHeight;
 @property (nonatomic, strong) UIView *headerView;
@@ -52,18 +49,9 @@ static const CGFloat YMSNavigationBarOriginalTopSpace = 0.0;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-
-    UINavigationItem *navigationItem = [[UINavigationItem alloc] init];
-    UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(dismiss:)];
-    navigationItem.leftBarButtonItem = cancelItem;
-
-    self.navigationBar.items = @[navigationItem];
     
+    // Do any additional setup after loading the view from its nib.
     if (![[YMSPhotoPickerTheme sharedInstance].navigationBarBackgroundColor isEqual:[UIColor whiteColor]]) {
-        [self.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-        [self.navigationBar setShadowImage:[UIImage new]];
-        self.navigationBarBackgroundView.backgroundColor = [YMSPhotoPickerTheme sharedInstance].navigationBarBackgroundColor;
         self.albumListTableView.tintColor = [YMSPhotoPickerTheme sharedInstance].navigationBarBackgroundColor;
     }
 
@@ -81,7 +69,7 @@ static const CGFloat YMSNavigationBarOriginalTopSpace = 0.0;
     [super viewDidLayoutSubviews];
 
     if (!self.footerView) {
-        self.albumListTableView.contentInset = UIEdgeInsetsMake(0.0, 0.0, -self.footerViewHeight, 0.0);
+        self.albumListTableView.contentInset = UIEdgeInsetsMake(70, 0.0, -self.footerViewHeight, 0.0);
         self.footerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, CGRectGetWidth(self.view.bounds), self.footerViewHeight)];
         self.footerView.backgroundColor = [UIColor whiteColor];
         self.albumListTableView.tableFooterView = self.footerView;
@@ -137,19 +125,6 @@ static const CGFloat YMSNavigationBarOriginalTopSpace = 0.0;
     
     PHAsset *asset = [fetchResult firstObject];
     cell.representedAssetIdentifier = asset.localIdentifier;
-    CGFloat scale = [UIScreen mainScreen].scale;
-    CGSize targetSize = CGSizeMake(40.0 * scale, 40.0 * scale);
-    
-    [self.imageManager requestImageForAsset:asset
-                                 targetSize:targetSize
-                                contentMode:PHImageContentModeAspectFill
-                                    options:nil
-                              resultHandler:^(UIImage *result, NSDictionary *info) {
-                                  // Set the cell's thumbnail image if it's still showing the same asset.
-                                  if ([cell.representedAssetIdentifier isEqualToString:asset.localIdentifier]) {
-                                      cell.thumbnailImage = result;
-                                  }
-                              }];
     
     return cell;
 }
@@ -169,51 +144,14 @@ static const CGFloat YMSNavigationBarOriginalTopSpace = 0.0;
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    // Measure table view scolling position is between the expectation
-    if (scrollView.contentOffset.y > YMSNavigationBarOriginalTopSpace
-        && scrollView.contentOffset.y + CGRectGetHeight(scrollView.bounds) < scrollView.contentSize.height - 1 - self.footerViewHeight) {
-        CGFloat topLayoutConstraintConstant = self.navigationBarTopLayoutConstraint.constant - (scrollView.contentOffset.y - scrollView.lastContentOffset.y);
-        // When next top constant is longer than maximum
-        if (topLayoutConstraintConstant < -YMSNavigationBarMaxTopSpace) {
-            self.navigationBarTopLayoutConstraint.constant = -YMSNavigationBarMaxTopSpace;
-        }
-        // When next top constant is smaller than the minimum
-        else if (topLayoutConstraintConstant > YMSNavigationBarOriginalTopSpace) {
-            self.navigationBarTopLayoutConstraint.constant = YMSNavigationBarOriginalTopSpace;
-        }
-        // Adjust navigation bar top space
-        else {
-            self.navigationBarTopLayoutConstraint.constant = topLayoutConstraintConstant;
-        }
-
-        CGFloat navigationBarAlphaStatus = 1.0 - self.navigationBarTopLayoutConstraint.constant/(YMSNavigationBarOriginalTopSpace - YMSNavigationBarMaxTopSpace);
-        self.navigationBar.alpha = navigationBarAlphaStatus;
+    if (scrollView.contentOffset.y > -70) {
+        [self.view bringSubviewToFront:self.albumListTableView];
     }
-
-    // Measure the scroll direction for adating animation in scrollViewDidEndDragging:
+    else{
+        [self.view sendSubviewToBack:self.albumListTableView];
+    }
     [scrollView yms_scrollViewDidScroll];
 }
 
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
-{
-    // measure the end point to add animation
-    if (self.navigationBarTopLayoutConstraint.constant > -YMSNavigationBarMaxTopSpace
-        && self.navigationBarTopLayoutConstraint.constant < YMSNavigationBarOriginalTopSpace) {
-
-        [UIView animateWithDuration:0.3 animations:^{
-            if (scrollView.scrollDirection == YMSScrollViewScrollDirectionUp) {
-                self.navigationBarTopLayoutConstraint.constant = -YMSNavigationBarMaxTopSpace;
-            }
-            else if (scrollView.scrollDirection == YMSScrollViewScrollDirectionDown) {
-                self.navigationBarTopLayoutConstraint.constant = YMSNavigationBarOriginalTopSpace;
-            }
-
-            CGFloat navigationBarAlphaStatus = 1.0 - self.navigationBarTopLayoutConstraint.constant/(YMSNavigationBarOriginalTopSpace - YMSNavigationBarMaxTopSpace);
-            self.navigationBar.alpha = navigationBarAlphaStatus;
-
-            [self.view layoutIfNeeded];
-        }];
-    }
-}
 
 @end

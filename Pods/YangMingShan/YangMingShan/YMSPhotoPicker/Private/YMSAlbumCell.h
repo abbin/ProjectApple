@@ -20,12 +20,6 @@
 @property (nonatomic, strong) NSString *representedAssetIdentifier;
 
 /**
- * @brief Set thumbnail image to this to display on left align UIImageView.
- *
- */
-@property (nonatomic, strong) UIImage *thumbnailImage;
-
-/**
  * @brief Set album name to this to display on left align UILabel.
  *
  */

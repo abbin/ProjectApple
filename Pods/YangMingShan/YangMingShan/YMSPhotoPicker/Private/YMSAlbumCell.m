@@ -11,7 +11,6 @@
 
 @interface YMSAlbumCell()
 
-@property (nonatomic, weak) IBOutlet UIImageView *thumbnailImageView;
 @property (nonatomic, weak) IBOutlet UILabel *albumNameLabel;
 @property (nonatomic, weak) IBOutlet UILabel *photosCountLabel;
 
@@ -22,20 +21,11 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-
-    self.photosCountLabel.font = [YMSPhotoPickerTheme sharedInstance].photosCountLabelFont;
-    self.albumNameLabel.font = [YMSPhotoPickerTheme sharedInstance].albumNameLabelFont;
 }
 
 - (NSString *)YMS_cellIdentifier
 {
     return @"YMSAlbumCell";
-}
-
-- (void)setThumbnailImage:(UIImage *)thumbnailImage
-{
-    self.thumbnailImageView.image = thumbnailImage;
-    _thumbnailImage = thumbnailImage;
 }
 
 - (void)setAlbumName:(NSString *)albumName

@@ -177,12 +177,12 @@ static CGFloat CHTFloorCGFloat(CGFloat value) {
 
 #pragma mark - Init
 - (void)commonInit {
-  _columnCount = 2;
+  _columnCount = 3;
   _minimumColumnSpacing = 10;
   _minimumInteritemSpacing = 10;
   _headerHeight = 0;
   _footerHeight = 0;
-  _sectionInset = UIEdgeInsetsZero;
+  _sectionInset = UIEdgeInsetsMake(0, 10, 0, 10);
   _headerInset  = UIEdgeInsetsZero;
   _footerInset  = UIEdgeInsetsZero;
   _itemRenderDirection = CHTCollectionViewWaterfallLayoutItemRenderDirectionShortestFirst;

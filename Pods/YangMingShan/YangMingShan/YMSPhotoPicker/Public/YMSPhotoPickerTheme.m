@@ -8,6 +8,12 @@
 
 #import "YMSPhotoPickerTheme.h"
 
+#define UIColorFromRGB(rgbValue) \
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
+                green:((float)((rgbValue & 0x00FF00) >>  8))/255.0 \
+                 blue:((float)((rgbValue & 0x0000FF) >>  0))/255.0 \
+                alpha:1.0]
+
 @implementation UIColor (YMSPhotoPickerTheme)
 
 + (UIColor *)systemBlueColor
@@ -37,7 +43,10 @@
 
 - (void)reset
 {
-    self.tintColor = self.orderTintColor = self.cameraVeilColor = [UIColor systemBlueColor];
+    self.tintColor = UIColorFromRGB(0xbd081c);
+    self.orderTintColor = UIColorFromRGB(0xd05260);
+    self.cameraVeilColor = [UIColor colorWithWhite:0 alpha:0.5];
+    
     self.orderLabelTextColor = self.navigationBarBackgroundColor = self.cameraIconColor = [UIColor whiteColor];
     self.titleLabelTextColor = [UIColor blackColor];
     self.statusBarStyle = UIStatusBarStyleDefault;

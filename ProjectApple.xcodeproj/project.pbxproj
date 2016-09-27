@@ -32,6 +32,7 @@
 		ED6E834D1D9957B500DA54FA /* PAWorkingHoursTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED6E834B1D9957B500DA54FA /* PAWorkingHoursTableViewCell.xib */; };
 		ED6E83511D995B6600DA54FA /* PAReviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6E834F1D995B6600DA54FA /* PAReviewTableViewCell.m */; };
 		ED6E83521D995B6600DA54FA /* PAReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED6E83501D995B6600DA54FA /* PAReviewTableViewCell.xib */; };
+		ED9704231D9A5E2500ABADD0 /* PAAddViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9704221D9A5E2500ABADD0 /* PAAddViewControllerOne.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +76,8 @@
 		ED6E834E1D995B6600DA54FA /* PAReviewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAReviewTableViewCell.h; sourceTree = "<group>"; };
 		ED6E834F1D995B6600DA54FA /* PAReviewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAReviewTableViewCell.m; sourceTree = "<group>"; };
 		ED6E83501D995B6600DA54FA /* PAReviewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PAReviewTableViewCell.xib; sourceTree = "<group>"; };
+		ED9704211D9A5E2500ABADD0 /* PAAddViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAAddViewControllerOne.h; sourceTree = "<group>"; };
+		ED9704221D9A5E2500ABADD0 /* PAAddViewControllerOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAAddViewControllerOne.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 				ED6E833D1D994E7900DA54FA /* PAColor.m */,
 				ED6E83151D992FCA00DA54FA /* ViewController.h */,
 				ED6E83161D992FCA00DA54FA /* ViewController.m */,
+				ED9704211D9A5E2500ABADD0 /* PAAddViewControllerOne.h */,
+				ED9704221D9A5E2500ABADD0 /* PAAddViewControllerOne.m */,
 				ED6E832F1D9935EA00DA54FA /* PADetailViewController.h */,
 				ED6E83301D9935EA00DA54FA /* PADetailViewController.m */,
 				ED6E83261D99320100DA54FA /* PANearbyTableViewCell.h */,
@@ -307,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED9704231D9A5E2500ABADD0 /* PAAddViewControllerOne.m in Sources */,
 				ED6E83351D99438C00DA54FA /* PADetailHeadingTableViewCell.m in Sources */,
 				ED6E83171D992FCA00DA54FA /* ViewController.m in Sources */,
 				ED6E83141D992FCA00DA54FA /* AppDelegate.m in Sources */,
