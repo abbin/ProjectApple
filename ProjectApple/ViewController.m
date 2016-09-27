@@ -10,6 +10,7 @@
 #import "PANearbyTableViewCell.h"
 #import "PADetailViewController.h"
 #import "UIViewController+YMSPhotoHelper.h"
+#import "PAAddViewControllerOne.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource,YMSPhotoPickerViewControllerDelegate>
 
@@ -56,7 +57,11 @@
 }
 
 - (IBAction)add:(id)sender {
-    [self yms_presentAlbumPhotoViewWithDelegate:self];
+    YMSPhotoPickerViewController *pickerViewController = [[YMSPhotoPickerViewController alloc] init];
+    pickerViewController.delegate = self;
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:pickerViewController];
+    [nav setNavigationBarHidden:YES];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 - (void)photoPickerViewControllerDidReceivePhotoAlbumAccessDenied:(YMSPhotoPickerViewController *)picker
@@ -110,7 +115,7 @@
                                      [mutableImages addObject:image];
                                      
                                      if (photoAssets.count == mutableImages.count) {
-                                         FAAddViewControllerOne *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"FAAddViewControllerOne"];
+                                         PAAddViewControllerOne *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PAAddViewControllerOne"];
                                          vc.images = mutableImages;
                                          [picker.navigationController pushViewController:vc animated:YES];
                                      }

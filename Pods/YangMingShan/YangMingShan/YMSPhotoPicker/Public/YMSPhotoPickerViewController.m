@@ -68,7 +68,7 @@ static const CGFloat YMSPhotoFetchScaleResizingRatio = 0.75;
 {
     [super viewDidLoad];
 
-    [self.photoCollectionView setContentInset:UIEdgeInsetsMake(94, 0, 0, 0)];
+    [self.photoCollectionView setContentInset:UIEdgeInsetsMake(80, 0, 0, 0)];
     
     // Set PHCachingImageManager here because you don't know photo album permission is allowed in init function
     self.imageManager = [[PHCachingImageManager alloc] init];
@@ -685,7 +685,15 @@ static const CGFloat YMSPhotoFetchScaleResizingRatio = 0.75;
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-
+    if (scrollView.contentOffset.y > -70) {
+        [self.view bringSubviewToFront:self.photoCollectionView];
+        [self.view bringSubviewToFront:self.doneItem];
+    }
+    else{
+        [self.view sendSubviewToBack:self.photoCollectionView];
+        [self.view bringSubviewToFront:self.doneItem];
+    }
+    
     // Measure the scroll direction for adating animation in scrollViewDidEndDragging:
     [scrollView yms_scrollViewDidScroll];
 }

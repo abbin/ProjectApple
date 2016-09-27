@@ -1,5 +1,5 @@
 //
-//  PAAddViewControllerOne.h
+//  PAAddDetailViewControllerOne.h
 //  ProjectApple
 //
 //  Created by Abbin Varghese on 27/09/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PAAddViewControllerOne : UIViewController
-
-@property (nonatomic, strong) NSMutableArray *images;
+@interface PAAddDetailViewControllerOne : UIViewController
 
 @end

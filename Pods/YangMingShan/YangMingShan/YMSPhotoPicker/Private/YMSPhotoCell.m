@@ -14,7 +14,7 @@
 
 static const CGFloat YMSHightedAnimationDuration = 0.15;
 static const CGFloat YMSUnhightedAnimationDuration = 0.4;
-static const CGFloat YMSHightedAnimationTransformScale = 0.9;
+static const CGFloat YMSHightedAnimationTransformScale = 0.95;
 static const CGFloat YMSUnhightedAnimationSpringDamping = 0.5;
 static const CGFloat YMSUnhightedAnimationSpringVelocity = 6.0;
 

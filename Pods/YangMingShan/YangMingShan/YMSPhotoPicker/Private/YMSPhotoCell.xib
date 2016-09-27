@@ -31,16 +31,16 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="pHv-Ky-9IK" secondAttribute="bottom" constant="2" id="6Bf-bB-vaX"/>
-                <constraint firstAttribute="trailing" secondItem="5Nu-Tc-xoT" secondAttribute="trailing" id="7Ow-8j-oyf"/>
-                <constraint firstAttribute="bottom" secondItem="5Nu-Tc-xoT" secondAttribute="bottom" id="Ia0-V1-z0N"/>
-                <constraint firstItem="5Nu-Tc-xoT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LQI-8J-ihA"/>
-                <constraint firstAttribute="trailing" secondItem="pHv-Ky-9IK" secondAttribute="trailing" constant="2" id="YnI-6m-rM0"/>
-                <constraint firstItem="5Nu-Tc-xoT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Zzh-Mj-OTv"/>
-                <constraint firstAttribute="trailing" secondItem="fuA-cX-VUz" secondAttribute="trailing" id="cDk-je-E9K"/>
-                <constraint firstAttribute="bottom" secondItem="fuA-cX-VUz" secondAttribute="bottom" id="kwD-cK-9OX"/>
-                <constraint firstItem="fuA-cX-VUz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pc6-fv-gEV"/>
-                <constraint firstItem="fuA-cX-VUz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="yau-Gg-xoc"/>
+                <constraint firstAttribute="bottom" secondItem="pHv-Ky-9IK" secondAttribute="bottom" constant="7" id="6Bf-bB-vaX"/>
+                <constraint firstAttribute="trailing" secondItem="5Nu-Tc-xoT" secondAttribute="trailing" constant="2" id="7Ow-8j-oyf"/>
+                <constraint firstAttribute="bottom" secondItem="5Nu-Tc-xoT" secondAttribute="bottom" constant="2" id="Ia0-V1-z0N"/>
+                <constraint firstItem="5Nu-Tc-xoT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="LQI-8J-ihA"/>
+                <constraint firstAttribute="trailing" secondItem="pHv-Ky-9IK" secondAttribute="trailing" constant="7" id="YnI-6m-rM0"/>
+                <constraint firstItem="5Nu-Tc-xoT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="Zzh-Mj-OTv"/>
+                <constraint firstAttribute="trailing" secondItem="fuA-cX-VUz" secondAttribute="trailing" constant="5" id="cDk-je-E9K"/>
+                <constraint firstAttribute="bottom" secondItem="fuA-cX-VUz" secondAttribute="bottom" constant="5" id="kwD-cK-9OX"/>
+                <constraint firstItem="fuA-cX-VUz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="pc6-fv-gEV"/>
+                <constraint firstItem="fuA-cX-VUz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="yau-Gg-xoc"/>
             </constraints>
             <connections>
                 <outlet property="imageView" destination="fuA-cX-VUz" id="f1f-f1-WZW"/>

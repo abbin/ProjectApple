@@ -7,8 +7,11 @@
 //
 
 #import "PAAddViewControllerOne.h"
+#import "PAAddDetailViewControllerOne.h"
 
-@interface PAAddViewControllerOne ()
+@interface PAAddViewControllerOne ()<UIGestureRecognizerDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 
 @end
 
@@ -16,22 +19,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.navigationController.interactivePopGestureRecognizer setDelegate:self];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
+    return YES;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.nameTextField becomeFirstResponder];
 }
-*/
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.nameTextField resignFirstResponder];
+}
+
+- (IBAction)back:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)next:(id)sender {
+    PAAddDetailViewControllerOne *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PAAddDetailViewControllerOne"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 @end
