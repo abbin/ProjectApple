@@ -34,6 +34,8 @@
 		ED6E83521D995B6600DA54FA /* PAReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED6E83501D995B6600DA54FA /* PAReviewTableViewCell.xib */; };
 		ED9704231D9A5E2500ABADD0 /* PAAddViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9704221D9A5E2500ABADD0 /* PAAddViewControllerOne.m */; };
 		ED9704261D9ABF1200ABADD0 /* PAAddDetailViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9704251D9ABF1200ABADD0 /* PAAddDetailViewControllerOne.m */; };
+		EDF2D4E01D9BD66400D1D138 /* PAAddViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2D4DF1D9BD66400D1D138 /* PAAddViewControllerTwo.m */; };
+		EDF2D4E31D9BEAF400D1D138 /* PAAddDetailViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2D4E21D9BEAF400D1D138 /* PAAddDetailViewControllerTwo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +83,10 @@
 		ED9704221D9A5E2500ABADD0 /* PAAddViewControllerOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAAddViewControllerOne.m; sourceTree = "<group>"; };
 		ED9704241D9ABF1200ABADD0 /* PAAddDetailViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAAddDetailViewControllerOne.h; sourceTree = "<group>"; };
 		ED9704251D9ABF1200ABADD0 /* PAAddDetailViewControllerOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAAddDetailViewControllerOne.m; sourceTree = "<group>"; };
+		EDF2D4DE1D9BD66400D1D138 /* PAAddViewControllerTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAAddViewControllerTwo.h; sourceTree = "<group>"; };
+		EDF2D4DF1D9BD66400D1D138 /* PAAddViewControllerTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAAddViewControllerTwo.m; sourceTree = "<group>"; };
+		EDF2D4E11D9BEAF400D1D138 /* PAAddDetailViewControllerTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAAddDetailViewControllerTwo.h; sourceTree = "<group>"; };
+		EDF2D4E21D9BEAF400D1D138 /* PAAddDetailViewControllerTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAAddDetailViewControllerTwo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,10 @@
 				ED9704221D9A5E2500ABADD0 /* PAAddViewControllerOne.m */,
 				ED9704241D9ABF1200ABADD0 /* PAAddDetailViewControllerOne.h */,
 				ED9704251D9ABF1200ABADD0 /* PAAddDetailViewControllerOne.m */,
+				EDF2D4DE1D9BD66400D1D138 /* PAAddViewControllerTwo.h */,
+				EDF2D4DF1D9BD66400D1D138 /* PAAddViewControllerTwo.m */,
+				EDF2D4E11D9BEAF400D1D138 /* PAAddDetailViewControllerTwo.h */,
+				EDF2D4E21D9BEAF400D1D138 /* PAAddDetailViewControllerTwo.m */,
 				ED6E832F1D9935EA00DA54FA /* PADetailViewController.h */,
 				ED6E83301D9935EA00DA54FA /* PADetailViewController.m */,
 				ED6E83261D99320100DA54FA /* PANearbyTableViewCell.h */,
@@ -325,12 +335,14 @@
 				ED6E83311D9935EA00DA54FA /* PADetailViewController.m in Sources */,
 				ED6E833E1D994E7900DA54FA /* PAColor.m in Sources */,
 				ED6E834C1D9957B500DA54FA /* PAWorkingHoursTableViewCell.m in Sources */,
+				EDF2D4E01D9BD66400D1D138 /* PAAddViewControllerTwo.m in Sources */,
 				ED6E833A1D99475D00DA54FA /* FALabelTableViewCell.m in Sources */,
 				ED6E83111D992FCA00DA54FA /* main.m in Sources */,
 				ED6E83511D995B6600DA54FA /* PAReviewTableViewCell.m in Sources */,
 				ED6E83291D99320100DA54FA /* PANearbyTableViewCell.m in Sources */,
 				ED6E83471D9952D400DA54FA /* PAImageViewCollectionViewCell.m in Sources */,
 				ED6E83421D994F7400DA54FA /* PACollectionTableViewCell.m in Sources */,
+				EDF2D4E31D9BEAF400D1D138 /* PAAddDetailViewControllerTwo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
