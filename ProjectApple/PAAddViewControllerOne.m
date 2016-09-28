@@ -13,12 +13,16 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 
+@property (strong, nonatomic) IBOutlet UIView *toolBar;
+
 @end
 
 @implementation PAAddViewControllerOne
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.nameTextField becomeFirstResponder];
+    self.nameTextField.inputAccessoryView = self.toolBar;
     [self.navigationController.interactivePopGestureRecognizer setDelegate:self];
 }
 

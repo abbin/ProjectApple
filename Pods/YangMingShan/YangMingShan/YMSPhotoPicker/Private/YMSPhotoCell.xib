@@ -21,21 +21,21 @@
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="pHv-Ky-9IK">
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="24" id="AHi-eQ-HpO"/>
-                            <constraint firstAttribute="height" constant="24" id="EYa-VI-rx7"/>
+                            <constraint firstAttribute="width" constant="19" id="AHi-eQ-HpO"/>
+                            <constraint firstAttribute="height" constant="19" id="EYa-VI-rx7"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="13"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="pHv-Ky-9IK" secondAttribute="bottom" constant="7" id="6Bf-bB-vaX"/>
+                <constraint firstAttribute="bottom" secondItem="pHv-Ky-9IK" secondAttribute="bottom" constant="5" id="6Bf-bB-vaX"/>
                 <constraint firstAttribute="trailing" secondItem="5Nu-Tc-xoT" secondAttribute="trailing" constant="2" id="7Ow-8j-oyf"/>
                 <constraint firstAttribute="bottom" secondItem="5Nu-Tc-xoT" secondAttribute="bottom" constant="2" id="Ia0-V1-z0N"/>
                 <constraint firstItem="5Nu-Tc-xoT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="LQI-8J-ihA"/>
-                <constraint firstAttribute="trailing" secondItem="pHv-Ky-9IK" secondAttribute="trailing" constant="7" id="YnI-6m-rM0"/>
+                <constraint firstAttribute="trailing" secondItem="pHv-Ky-9IK" secondAttribute="trailing" constant="5" id="YnI-6m-rM0"/>
                 <constraint firstItem="5Nu-Tc-xoT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="Zzh-Mj-OTv"/>
                 <constraint firstAttribute="trailing" secondItem="fuA-cX-VUz" secondAttribute="trailing" constant="5" id="cDk-je-E9K"/>
                 <constraint firstAttribute="bottom" secondItem="fuA-cX-VUz" secondAttribute="bottom" constant="5" id="kwD-cK-9OX"/>

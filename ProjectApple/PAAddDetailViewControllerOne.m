@@ -10,13 +10,19 @@
 
 @interface PAAddDetailViewControllerOne ()
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
 @end
 
 @implementation PAAddDetailViewControllerOne
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self.scrollView setContentInset:UIEdgeInsetsMake(64, 0, 0, 0)];
+}
+
+- (IBAction)back:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
