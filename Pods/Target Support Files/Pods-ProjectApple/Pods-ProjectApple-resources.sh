@@ -80,6 +80,9 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "FBSDKCoreKit/FacebookSDKStrings.bundle"
+  install_resource "GoogleMaps/Subspecs/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle"
+  install_resource "Parse/Parse/Resources/en.lproj"
   install_resource "YangMingShan/YangMingShan/YMSPhotoPicker/Private/YMSAlbumCell.xib"
   install_resource "YangMingShan/YangMingShan/YMSPhotoPicker/Private/YMSAlbumPickerViewController.xib"
   install_resource "YangMingShan/YangMingShan/YMSPhotoPicker/Private/YMSCameraCell.xib"
@@ -89,6 +92,9 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "YangMingShan/YangMingShan/YMSPhotoPicker/YMSPhotoPickerAssets.xcassets"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "FBSDKCoreKit/FacebookSDKStrings.bundle"
+  install_resource "GoogleMaps/Subspecs/Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle"
+  install_resource "Parse/Parse/Resources/en.lproj"
   install_resource "YangMingShan/YangMingShan/YMSPhotoPicker/Private/YMSAlbumCell.xib"
   install_resource "YangMingShan/YangMingShan/YMSPhotoPicker/Private/YMSAlbumPickerViewController.xib"
   install_resource "YangMingShan/YangMingShan/YMSPhotoPicker/Private/YMSCameraCell.xib"

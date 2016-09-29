@@ -1,19 +1,66 @@
 PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
   - CHTCollectionViewWaterfallLayout (0.9.5):
     - CHTCollectionViewWaterfallLayout/ObjC (= 0.9.5)
   - CHTCollectionViewWaterfallLayout/ObjC (0.9.5)
+  - FBSDKCoreKit (4.15.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.15.0):
+    - FBSDKCoreKit
+  - FBSDKShareKit (4.15.0):
+    - FBSDKCoreKit
+  - GoogleMaps (2.0.1):
+    - GoogleMaps/Maps (= 2.0.1)
+  - GoogleMaps/Base (2.0.1)
+  - GoogleMaps/Maps (2.0.1):
+    - GoogleMaps/Base (= 2.0.1)
+  - Parse (1.14.2):
+    - Bolts/Tasks (~> 1.8)
   - YangMingShan (1.2.2):
     - YangMingShan/YMSPhotoPicker (= 1.2.2)
   - YangMingShan/YMSPhotoPicker (1.2.2)
 
 DEPENDENCIES:
+  - AFNetworking (~> 3.0)
   - CHTCollectionViewWaterfallLayout
+  - FBSDKCoreKit
+  - FBSDKLoginKit
+  - FBSDKShareKit
+  - GoogleMaps
+  - Parse
   - YangMingShan
 
 SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   CHTCollectionViewWaterfallLayout: 775ff73f48cfc13859b62d8bceb96e772e4a0318
+  FBSDKCoreKit: 6680cbd33a4243d80700f182d0af36b3fa7f3118
+  FBSDKLoginKit: 96d9b70b5784490f02ab86119e542a1f182017a8
+  FBSDKShareKit: 06ef20cb2f16828ca4b20055333313dd445de362
+  GoogleMaps: f09da64fc987c1aa29394567c3cab5a3df83c402
+  Parse: 4335d65f40cb3d43190d723144bbe1afb9c38230
   YangMingShan: aecb8b3099624da18f1d416839a2769d3394a140
 
-PODFILE CHECKSUM: 7848fd6f9efd11bb253b58e0299a7d23f2bab66d
+PODFILE CHECKSUM: 53fa8a47d47ace05b8777a8be56e7d53eb7be425
 
 COCOAPODS: 1.0.1

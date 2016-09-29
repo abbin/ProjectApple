@@ -4,7 +4,37 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>CHTCollectionViewWaterfallLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKCoreKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKLoginKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKShareKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +52,47 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>614B9A574AFC952D6575AC9347A8CA71</key>
+		<key>02C21F3242DDFED9C7E8FD8744D131DA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0C1F8E331232C34F034FD26C684AFA0A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>146D4D3BEC39209E7FD55AD619B9712E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>25FA40E88E34813F7288E92C0EF02CA8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2B1D61AC8FC8F0F7AA4E46CC76927A12</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B7A4AB80068ABFB538BE183427E8734</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6E7B2CF2F9D161E4DB2C0174D7A3D9CA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>928353533005A4198EBDA5B700D37B64</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>9B36D462102DAF8E84F6D9AB9C868C59</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C977D508E316E5F03F8A40016FE54FE6</key>
 		<dict>
 			<key>primary</key>
 			<true/>

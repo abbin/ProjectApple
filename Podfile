@@ -9,5 +9,11 @@ target 'ProjectApple' do
 
 pod 'YangMingShan'
 pod 'CHTCollectionViewWaterfallLayout'
+pod 'Parse'
+pod 'AFNetworking', '~> 3.0'
+pod 'GoogleMaps'
+pod 'FBSDKCoreKit'
+pod 'FBSDKShareKit'
+pod 'FBSDKLoginKit'
 
 end
