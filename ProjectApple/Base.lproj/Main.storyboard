@@ -605,9 +605,7 @@
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8O-gn-luM">
                                                 <subviews>
-                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n5w-4h-x6F" customClass="TLTagsControl">
-                                                        <color key="backgroundColor" red="0.95294117649999999" green="0.71764705880000002" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </scrollView>
+                                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n5w-4h-x6F" customClass="TLTagsControl"/>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>

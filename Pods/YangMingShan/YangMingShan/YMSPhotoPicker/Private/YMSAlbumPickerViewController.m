@@ -49,6 +49,7 @@ static const CGFloat YMSNavigationBarOriginalTopSpace = 0.0;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setAutomaticallyAdjustsScrollViewInsets:NO];
     
     // Do any additional setup after loading the view from its nib.
     if (![[YMSPhotoPickerTheme sharedInstance].navigationBarBackgroundColor isEqual:[UIColor whiteColor]]) {
@@ -69,7 +70,7 @@ static const CGFloat YMSNavigationBarOriginalTopSpace = 0.0;
     [super viewDidLayoutSubviews];
 
     if (!self.footerView) {
-        self.albumListTableView.contentInset = UIEdgeInsetsMake(70, 0.0, -self.footerViewHeight, 0.0);
+        self.albumListTableView.contentInset = UIEdgeInsetsMake(84, 0.0, -self.footerViewHeight, 0.0);
         self.footerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, CGRectGetWidth(self.view.bounds), self.footerViewHeight)];
         self.footerView.backgroundColor = [UIColor whiteColor];
         self.albumListTableView.tableFooterView = self.footerView;

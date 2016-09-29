@@ -31,7 +31,7 @@
                     <constraints>
                         <constraint firstItem="OPQ-57-oXY" firstAttribute="centerY" secondItem="PlY-Qj-kFT" secondAttribute="centerY" id="57i-z0-bJn"/>
                         <constraint firstItem="OPQ-57-oXY" firstAttribute="height" secondItem="PlY-Qj-kFT" secondAttribute="height" multiplier="0.6" id="SjX-lx-hd2"/>
-                        <constraint firstAttribute="trailing" secondItem="OPQ-57-oXY" secondAttribute="trailing" constant="8" id="Tsy-Xy-5Tj"/>
+                        <constraint firstAttribute="trailing" secondItem="OPQ-57-oXY" secondAttribute="trailing" constant="15" id="Tsy-Xy-5Tj"/>
                         <constraint firstAttribute="height" constant="64" id="gHv-By-P3J"/>
                     </constraints>
                 </view>
@@ -46,7 +46,7 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="PlY-Qj-kFT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="22" id="8yS-gi-UCY"/>
+                <constraint firstItem="PlY-Qj-kFT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="8yS-gi-UCY"/>
                 <constraint firstItem="cLv-KU-yiY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="DOo-jj-w4b"/>
                 <constraint firstItem="cLv-KU-yiY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MYe-W7-qqt"/>
                 <constraint firstAttribute="trailing" secondItem="cLv-KU-yiY" secondAttribute="trailing" id="d9n-xv-2he"/>
