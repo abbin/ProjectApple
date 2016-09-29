@@ -37,6 +37,9 @@
 		EDF2D4E01D9BD66400D1D138 /* PAAddViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2D4DF1D9BD66400D1D138 /* PAAddViewControllerTwo.m */; };
 		EDF2D4E31D9BEAF400D1D138 /* PAAddDetailViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2D4E21D9BEAF400D1D138 /* PAAddDetailViewControllerTwo.m */; };
 		EDF2D4E61D9CFE5D00D1D138 /* TLTagsControl.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2D4E51D9CFE5D00D1D138 /* TLTagsControl.m */; };
+		EDF2D5241D9D4ED100D1D138 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2D51F1D9D4ED100D1D138 /* RootViewController.m */; };
+		EDF2D5251D9D4ED100D1D138 /* ViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2D5211D9D4ED100D1D138 /* ViewControllerThree.m */; };
+		EDF2D5261D9D4ED100D1D138 /* ViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2D5231D9D4ED100D1D138 /* ViewControllerTwo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +93,12 @@
 		EDF2D4E21D9BEAF400D1D138 /* PAAddDetailViewControllerTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAAddDetailViewControllerTwo.m; sourceTree = "<group>"; };
 		EDF2D4E41D9CFE5D00D1D138 /* TLTagsControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLTagsControl.h; sourceTree = "<group>"; };
 		EDF2D4E51D9CFE5D00D1D138 /* TLTagsControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLTagsControl.m; sourceTree = "<group>"; };
+		EDF2D51E1D9D4ED100D1D138 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		EDF2D51F1D9D4ED100D1D138 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		EDF2D5201D9D4ED100D1D138 /* ViewControllerThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerThree.h; sourceTree = "<group>"; };
+		EDF2D5211D9D4ED100D1D138 /* ViewControllerThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerThree.m; sourceTree = "<group>"; };
+		EDF2D5221D9D4ED100D1D138 /* ViewControllerTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerTwo.h; sourceTree = "<group>"; };
+		EDF2D5231D9D4ED100D1D138 /* ViewControllerTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTwo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,44 +153,10 @@
 			children = (
 				ED6E83121D992FCA00DA54FA /* AppDelegate.h */,
 				ED6E83131D992FCA00DA54FA /* AppDelegate.m */,
-				ED6E833C1D994E7900DA54FA /* PAColor.h */,
-				ED6E833D1D994E7900DA54FA /* PAColor.m */,
-				ED6E83151D992FCA00DA54FA /* ViewController.h */,
-				ED6E83161D992FCA00DA54FA /* ViewController.m */,
-				ED9704211D9A5E2500ABADD0 /* PAAddViewControllerOne.h */,
-				ED9704221D9A5E2500ABADD0 /* PAAddViewControllerOne.m */,
-				ED9704241D9ABF1200ABADD0 /* PAAddDetailViewControllerOne.h */,
-				ED9704251D9ABF1200ABADD0 /* PAAddDetailViewControllerOne.m */,
-				EDF2D4DE1D9BD66400D1D138 /* PAAddViewControllerTwo.h */,
-				EDF2D4DF1D9BD66400D1D138 /* PAAddViewControllerTwo.m */,
-				EDF2D4E11D9BEAF400D1D138 /* PAAddDetailViewControllerTwo.h */,
-				EDF2D4E21D9BEAF400D1D138 /* PAAddDetailViewControllerTwo.m */,
-				ED6E832F1D9935EA00DA54FA /* PADetailViewController.h */,
-				ED6E83301D9935EA00DA54FA /* PADetailViewController.m */,
-				ED6E83261D99320100DA54FA /* PANearbyTableViewCell.h */,
-				ED6E83271D99320100DA54FA /* PANearbyTableViewCell.m */,
-				ED6E83281D99320100DA54FA /* PANearbyTableViewCell.xib */,
-				ED6E83321D99438C00DA54FA /* PADetailHeadingTableViewCell.h */,
-				ED6E83331D99438C00DA54FA /* PADetailHeadingTableViewCell.m */,
-				ED6E83341D99438C00DA54FA /* PADetailHeadingTableViewCell.xib */,
-				ED6E83371D99475D00DA54FA /* FALabelTableViewCell.h */,
-				ED6E83381D99475D00DA54FA /* FALabelTableViewCell.m */,
-				ED6E83391D99475D00DA54FA /* FALabelTableViewCell.xib */,
-				ED6E833F1D994F7400DA54FA /* PACollectionTableViewCell.h */,
-				ED6E83401D994F7400DA54FA /* PACollectionTableViewCell.m */,
-				ED6E83411D994F7400DA54FA /* PACollectionTableViewCell.xib */,
-				ED6E83441D9952D400DA54FA /* PAImageViewCollectionViewCell.h */,
-				ED6E83451D9952D400DA54FA /* PAImageViewCollectionViewCell.m */,
-				ED6E83461D9952D400DA54FA /* PAImageViewCollectionViewCell.xib */,
-				ED6E83491D9957B500DA54FA /* PAWorkingHoursTableViewCell.h */,
-				ED6E834A1D9957B500DA54FA /* PAWorkingHoursTableViewCell.m */,
-				ED6E834B1D9957B500DA54FA /* PAWorkingHoursTableViewCell.xib */,
-				ED6E834E1D995B6600DA54FA /* PAReviewTableViewCell.h */,
-				ED6E834F1D995B6600DA54FA /* PAReviewTableViewCell.m */,
-				ED6E83501D995B6600DA54FA /* PAReviewTableViewCell.xib */,
 				ED6E83181D992FCA00DA54FA /* Main.storyboard */,
-				EDF2D4E41D9CFE5D00D1D138 /* TLTagsControl.h */,
-				EDF2D4E51D9CFE5D00D1D138 /* TLTagsControl.m */,
+				EDF2D5281D9D6D2B00D1D138 /* Modals */,
+				EDF2D5271D9D6D0400D1D138 /* ViewControllers */,
+				EDF2D52F1D9D6DDB00D1D138 /* UI */,
 				ED6E831B1D992FCA00DA54FA /* Assets.xcassets */,
 				ED6E831D1D992FCA00DA54FA /* LaunchScreen.storyboard */,
 				ED6E83201D992FCA00DA54FA /* Info.plist */,
@@ -198,6 +173,118 @@
 				ED6E83101D992FCA00DA54FA /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EDF2D5271D9D6D0400D1D138 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EDF2D51E1D9D4ED100D1D138 /* RootViewController.h */,
+				EDF2D51F1D9D4ED100D1D138 /* RootViewController.m */,
+				EDF2D52B1D9D6D9300D1D138 /* PageOne */,
+				EDF2D52C1D9D6DA800D1D138 /* PageTwo */,
+				EDF2D52D1D9D6DAF00D1D138 /* PageThree */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EDF2D5281D9D6D2B00D1D138 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Modals;
+			sourceTree = "<group>";
+		};
+		EDF2D5291D9D6D4300D1D138 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				ED6E83261D99320100DA54FA /* PANearbyTableViewCell.h */,
+				ED6E83271D99320100DA54FA /* PANearbyTableViewCell.m */,
+				ED6E83281D99320100DA54FA /* PANearbyTableViewCell.xib */,
+				ED6E83321D99438C00DA54FA /* PADetailHeadingTableViewCell.h */,
+				ED6E83331D99438C00DA54FA /* PADetailHeadingTableViewCell.m */,
+				ED6E83341D99438C00DA54FA /* PADetailHeadingTableViewCell.xib */,
+				ED6E83371D99475D00DA54FA /* FALabelTableViewCell.h */,
+				ED6E83381D99475D00DA54FA /* FALabelTableViewCell.m */,
+				ED6E83391D99475D00DA54FA /* FALabelTableViewCell.xib */,
+				ED6E83491D9957B500DA54FA /* PAWorkingHoursTableViewCell.h */,
+				ED6E834A1D9957B500DA54FA /* PAWorkingHoursTableViewCell.m */,
+				ED6E834B1D9957B500DA54FA /* PAWorkingHoursTableViewCell.xib */,
+				ED6E834E1D995B6600DA54FA /* PAReviewTableViewCell.h */,
+				ED6E834F1D995B6600DA54FA /* PAReviewTableViewCell.m */,
+				ED6E83501D995B6600DA54FA /* PAReviewTableViewCell.xib */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		EDF2D52A1D9D6D6200D1D138 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				ED6E833F1D994F7400DA54FA /* PACollectionTableViewCell.h */,
+				ED6E83401D994F7400DA54FA /* PACollectionTableViewCell.m */,
+				ED6E83411D994F7400DA54FA /* PACollectionTableViewCell.xib */,
+				ED6E83441D9952D400DA54FA /* PAImageViewCollectionViewCell.h */,
+				ED6E83451D9952D400DA54FA /* PAImageViewCollectionViewCell.m */,
+				ED6E83461D9952D400DA54FA /* PAImageViewCollectionViewCell.xib */,
+			);
+			name = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		EDF2D52B1D9D6D9300D1D138 /* PageOne */ = {
+			isa = PBXGroup;
+			children = (
+				ED6E83151D992FCA00DA54FA /* ViewController.h */,
+				ED6E83161D992FCA00DA54FA /* ViewController.m */,
+				ED6E832F1D9935EA00DA54FA /* PADetailViewController.h */,
+				ED6E83301D9935EA00DA54FA /* PADetailViewController.m */,
+				EDF2D52E1D9D6DBF00D1D138 /* Add */,
+			);
+			name = PageOne;
+			sourceTree = "<group>";
+		};
+		EDF2D52C1D9D6DA800D1D138 /* PageTwo */ = {
+			isa = PBXGroup;
+			children = (
+				EDF2D5221D9D4ED100D1D138 /* ViewControllerTwo.h */,
+				EDF2D5231D9D4ED100D1D138 /* ViewControllerTwo.m */,
+			);
+			name = PageTwo;
+			sourceTree = "<group>";
+		};
+		EDF2D52D1D9D6DAF00D1D138 /* PageThree */ = {
+			isa = PBXGroup;
+			children = (
+				EDF2D5201D9D4ED100D1D138 /* ViewControllerThree.h */,
+				EDF2D5211D9D4ED100D1D138 /* ViewControllerThree.m */,
+			);
+			name = PageThree;
+			sourceTree = "<group>";
+		};
+		EDF2D52E1D9D6DBF00D1D138 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				ED9704211D9A5E2500ABADD0 /* PAAddViewControllerOne.h */,
+				ED9704221D9A5E2500ABADD0 /* PAAddViewControllerOne.m */,
+				ED9704241D9ABF1200ABADD0 /* PAAddDetailViewControllerOne.h */,
+				ED9704251D9ABF1200ABADD0 /* PAAddDetailViewControllerOne.m */,
+				EDF2D4DE1D9BD66400D1D138 /* PAAddViewControllerTwo.h */,
+				EDF2D4DF1D9BD66400D1D138 /* PAAddViewControllerTwo.m */,
+				EDF2D4E11D9BEAF400D1D138 /* PAAddDetailViewControllerTwo.h */,
+				EDF2D4E21D9BEAF400D1D138 /* PAAddDetailViewControllerTwo.m */,
+			);
+			name = Add;
+			sourceTree = "<group>";
+		};
+		EDF2D52F1D9D6DDB00D1D138 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				ED6E833C1D994E7900DA54FA /* PAColor.h */,
+				ED6E833D1D994E7900DA54FA /* PAColor.m */,
+				EDF2D4E41D9CFE5D00D1D138 /* TLTagsControl.h */,
+				EDF2D4E51D9CFE5D00D1D138 /* TLTagsControl.m */,
+				EDF2D5291D9D6D4300D1D138 /* TableViewCells */,
+				EDF2D52A1D9D6D6200D1D138 /* CollectionViewCells */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +421,7 @@
 			files = (
 				ED9704231D9A5E2500ABADD0 /* PAAddViewControllerOne.m in Sources */,
 				ED9704261D9ABF1200ABADD0 /* PAAddDetailViewControllerOne.m in Sources */,
+				EDF2D5251D9D4ED100D1D138 /* ViewControllerThree.m in Sources */,
 				ED6E83351D99438C00DA54FA /* PADetailHeadingTableViewCell.m in Sources */,
 				ED6E83171D992FCA00DA54FA /* ViewController.m in Sources */,
 				ED6E83141D992FCA00DA54FA /* AppDelegate.m in Sources */,
@@ -346,6 +434,8 @@
 				ED6E83111D992FCA00DA54FA /* main.m in Sources */,
 				ED6E83511D995B6600DA54FA /* PAReviewTableViewCell.m in Sources */,
 				ED6E83291D99320100DA54FA /* PANearbyTableViewCell.m in Sources */,
+				EDF2D5261D9D4ED100D1D138 /* ViewControllerTwo.m in Sources */,
+				EDF2D5241D9D4ED100D1D138 /* RootViewController.m in Sources */,
 				ED6E83471D9952D400DA54FA /* PAImageViewCollectionViewCell.m in Sources */,
 				ED6E83421D994F7400DA54FA /* PACollectionTableViewCell.m in Sources */,
 				EDF2D4E31D9BEAF400D1D138 /* PAAddDetailViewControllerTwo.m in Sources */,

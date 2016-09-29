@@ -28,6 +28,10 @@
     [self.nearbyTableView registerNib:[UINib nibWithNibName:@"PANearbyTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"PANearbyTableViewCell"];
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"setDataSourceAndDelegate" object:self];
+}
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
@@ -43,6 +47,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"removeDataSourceAndDelegate" object:self];
     PADetailViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PADetailViewController"];
     [self.navigationController pushViewController:vc animated:YES];
 }
