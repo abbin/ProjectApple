@@ -27,7 +27,7 @@
     
     [self.navigationController.interactivePopGestureRecognizer setDelegate:self];
     
-    [self.detailTableview setContentInset:UIEdgeInsetsMake(70, 0, 0, 0)];
+    [self.detailTableview setContentInset:UIEdgeInsetsMake(84, 0, 0, 0)];
     [self.detailTableview setEstimatedRowHeight:286];
     [self.detailTableview setRowHeight:UITableViewAutomaticDimension];
     [self.detailTableview registerNib:[UINib nibWithNibName:@"PADetailHeadingTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"PADetailHeadingTableViewCell"];

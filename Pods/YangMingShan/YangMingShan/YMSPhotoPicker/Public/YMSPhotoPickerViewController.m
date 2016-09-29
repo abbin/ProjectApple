@@ -68,7 +68,9 @@ static const CGFloat YMSPhotoFetchScaleResizingRatio = 0.75;
 {
     [super viewDidLoad];
 
-    [self.photoCollectionView setContentInset:UIEdgeInsetsMake(80, 0, 0, 0)];
+    [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    
+    [self.photoCollectionView setContentInset:UIEdgeInsetsMake(84, 0, 0, 0)];
     
     // Set PHCachingImageManager here because you don't know photo album permission is allowed in init function
     self.imageManager = [[PHCachingImageManager alloc] init];

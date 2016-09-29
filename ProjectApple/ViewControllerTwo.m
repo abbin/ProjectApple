@@ -1,24 +1,22 @@
 //
-//  PAAddDetailViewControllerTwo.m
+//  ViewControllerTwo.m
 //  ProjectApple
 //
-//  Created by Abbin Varghese on 28/09/16.
+//  Created by Abbin Varghese on 29/09/16.
 //  Copyright © 2016 ABN. All rights reserved.
 //
 
-#import "PAAddDetailViewControllerTwo.h"
+#import "ViewControllerTwo.h"
 
-@interface PAAddDetailViewControllerTwo ()
-
-@property (weak, nonatomic) IBOutlet UIScrollView *scroolView;
+@interface ViewControllerTwo ()
 
 @end
 
-@implementation PAAddDetailViewControllerTwo
+@implementation ViewControllerTwo
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.scroolView setContentInset:UIEdgeInsetsMake(84, 0, 0, 0)];
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

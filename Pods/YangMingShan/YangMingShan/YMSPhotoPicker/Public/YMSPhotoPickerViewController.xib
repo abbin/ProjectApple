@@ -21,47 +21,56 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4eg-zN-avL">
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <collectionViewLayout key="collectionViewLayout" id="CbU-Z6-ruh" customClass="CHTCollectionViewWaterfallLayout"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="VBA-eU-e5x"/>
                         <outlet property="delegate" destination="-1" id="vTu-AA-3RI"/>
                     </connections>
                 </collectionView>
-                <imageView userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropDown" translatesAutoresizingMaskIntoConstraints="NO" id="g4r-tL-GAc">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDJ-gv-Wr9">
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropDown" translatesAutoresizingMaskIntoConstraints="NO" id="g4r-tL-GAc">
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="g4r-tL-GAc" secondAttribute="height" multiplier="1:1" id="hJO-WD-ZDL"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" alpha="0.55000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aro-i2-mBA">
+                            <state key="normal" image="close"/>
+                            <state key="highlighted" image="closeSelected"/>
+                            <connections>
+                                <action selector="dismiss:" destination="-1" eventType="touchUpInside" id="NqK-cM-efa"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXx-SH-9Q1">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                            <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                            <state key="normal" title="Camera Roll">
+                                <color key="titleColor" white="0.0" alpha="0.53857758619999996" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="presentAlbumPickerView:" destination="-1" eventType="touchUpInside" id="QbH-Oy-lqj"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="g4r-tL-GAc" secondAttribute="height" multiplier="1:1" id="3jj-eO-iaB"/>
+                        <constraint firstAttribute="height" constant="64" id="71h-pZ-WPM"/>
+                        <constraint firstItem="RXx-SH-9Q1" firstAttribute="top" secondItem="HDJ-gv-Wr9" secondAttribute="top" id="8lD-tl-biR"/>
+                        <constraint firstAttribute="trailing" secondItem="aro-i2-mBA" secondAttribute="trailing" constant="15" id="OZf-CM-dcF"/>
+                        <constraint firstItem="g4r-tL-GAc" firstAttribute="trailing" secondItem="RXx-SH-9Q1" secondAttribute="trailing" id="VuI-Ks-g9y"/>
+                        <constraint firstItem="aro-i2-mBA" firstAttribute="centerY" secondItem="HDJ-gv-Wr9" secondAttribute="centerY" id="bkE-13-Hnm"/>
+                        <constraint firstItem="g4r-tL-GAc" firstAttribute="height" secondItem="RXx-SH-9Q1" secondAttribute="height" multiplier="0.1" id="day-14-t43"/>
+                        <constraint firstItem="aro-i2-mBA" firstAttribute="height" secondItem="RXx-SH-9Q1" secondAttribute="height" multiplier="0.6" id="e9J-dj-ukr"/>
+                        <constraint firstItem="RXx-SH-9Q1" firstAttribute="leading" secondItem="HDJ-gv-Wr9" secondAttribute="leading" constant="15" id="hdE-SR-Gff"/>
+                        <constraint firstAttribute="bottom" secondItem="RXx-SH-9Q1" secondAttribute="bottom" id="kzW-mo-agz"/>
+                        <constraint firstItem="g4r-tL-GAc" firstAttribute="centerY" secondItem="RXx-SH-9Q1" secondAttribute="centerY" id="wbY-WK-HW1"/>
                     </constraints>
-                </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXx-SH-9Q1">
-                    <constraints>
-                        <constraint firstAttribute="height" constant="64" id="Cwc-SH-W0k"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
-                    <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
-                    <state key="normal" title="Camera Roll">
-                        <color key="titleColor" white="0.0" alpha="0.53857758619999996" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="presentAlbumPickerView:" destination="-1" eventType="touchUpInside" id="QbH-Oy-lqj"/>
-                    </connections>
-                </button>
-                <button opaque="NO" alpha="0.55000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aro-i2-mBA">
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="aro-i2-mBA" secondAttribute="height" multiplier="1:1" id="9fm-ET-E6L"/>
-                    </constraints>
-                    <state key="normal" image="close"/>
-                    <state key="highlighted" image="closeSelected"/>
-                    <connections>
-                        <action selector="dismiss:" destination="-1" eventType="touchUpInside" id="NqK-cM-efa"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAV-ew-wFk">
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAV-ew-wFk">
+                    <frame key="frameInset" minX="316" minY="608" width="44" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.95686274509803915" green="0.2627450980392157" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="44" id="S4n-2Y-xPz"/>
-                        <constraint firstAttribute="width" constant="44" id="mwj-W7-kzv"/>
-                    </constraints>
                     <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                     <state key="normal" image="next"/>
                     <state key="highlighted" image="nextSelected"/>
@@ -72,20 +81,13 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="dAV-ew-wFk" secondAttribute="bottom" constant="15" id="32p-cB-yHG"/>
-                <constraint firstItem="aro-i2-mBA" firstAttribute="centerY" secondItem="RXx-SH-9Q1" secondAttribute="centerY" id="D2J-Is-bHP"/>
-                <constraint firstAttribute="trailing" secondItem="4eg-zN-avL" secondAttribute="trailing" id="GDj-Oe-3nG"/>
-                <constraint firstItem="4eg-zN-avL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Kea-xV-hd9"/>
-                <constraint firstAttribute="trailing" secondItem="aro-i2-mBA" secondAttribute="trailing" constant="8" id="LK3-5K-1md"/>
-                <constraint firstItem="g4r-tL-GAc" firstAttribute="height" secondItem="RXx-SH-9Q1" secondAttribute="height" multiplier="0.1" id="SCb-Cd-GUZ"/>
-                <constraint firstItem="RXx-SH-9Q1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="WiW-KK-GYm"/>
-                <constraint firstItem="RXx-SH-9Q1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="22" id="ivI-Bl-xHF"/>
-                <constraint firstItem="g4r-tL-GAc" firstAttribute="trailing" secondItem="RXx-SH-9Q1" secondAttribute="trailing" id="jBa-r1-PXj"/>
-                <constraint firstAttribute="bottom" secondItem="4eg-zN-avL" secondAttribute="bottom" id="ldf-M7-s3l"/>
-                <constraint firstAttribute="trailing" secondItem="dAV-ew-wFk" secondAttribute="trailing" constant="15" id="lfD-uT-kqj"/>
-                <constraint firstItem="4eg-zN-avL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pRj-MN-j6i"/>
-                <constraint firstItem="g4r-tL-GAc" firstAttribute="centerY" secondItem="RXx-SH-9Q1" secondAttribute="centerY" id="po4-RE-nVR"/>
-                <constraint firstItem="aro-i2-mBA" firstAttribute="height" secondItem="RXx-SH-9Q1" secondAttribute="height" multiplier="0.6" id="rSp-i3-IRB"/>
+                <constraint firstItem="HDJ-gv-Wr9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5N7-Ll-aCJ"/>
+                <constraint firstItem="4eg-zN-avL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7XB-ej-cGO"/>
+                <constraint firstItem="4eg-zN-avL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Djs-v4-De6"/>
+                <constraint firstItem="HDJ-gv-Wr9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="K5Y-QY-QeK"/>
+                <constraint firstAttribute="bottom" secondItem="4eg-zN-avL" secondAttribute="bottom" id="Vmv-ww-mjw"/>
+                <constraint firstAttribute="trailing" secondItem="4eg-zN-avL" secondAttribute="trailing" id="X4h-UV-zm1"/>
+                <constraint firstAttribute="trailing" secondItem="HDJ-gv-Wr9" secondAttribute="trailing" id="ZFN-8K-Wau"/>
             </constraints>
             <point key="canvasLocation" x="26.5" y="51.5"/>
         </view>

@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.scrollView setContentInset:UIEdgeInsetsMake(64, 0, 0, 0)];
+    [self.scrollView setContentInset:UIEdgeInsetsMake(84, 0, 0, 0)];
     self.nextButton.backgroundColor = [PAColor appleRed];
 }
 

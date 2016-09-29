@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.nearbyTableView setContentInset:UIEdgeInsetsMake(70, 0, 0, 0)];
+    [self.nearbyTableView setContentInset:UIEdgeInsetsMake(84, 0, 0, 0)];
     [self.nearbyTableView setEstimatedRowHeight:286];
     [self.nearbyTableView setRowHeight:UITableViewAutomaticDimension];
     [self.nearbyTableView registerNib:[UINib nibWithNibName:@"PANearbyTableViewCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:@"PANearbyTableViewCell"];
