@@ -36,6 +36,7 @@
 		ED9704261D9ABF1200ABADD0 /* PAAddDetailViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9704251D9ABF1200ABADD0 /* PAAddDetailViewControllerOne.m */; };
 		EDF2D4E01D9BD66400D1D138 /* PAAddViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2D4DF1D9BD66400D1D138 /* PAAddViewControllerTwo.m */; };
 		EDF2D4E31D9BEAF400D1D138 /* PAAddDetailViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2D4E21D9BEAF400D1D138 /* PAAddDetailViewControllerTwo.m */; };
+		EDF2D4E61D9CFE5D00D1D138 /* TLTagsControl.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2D4E51D9CFE5D00D1D138 /* TLTagsControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,8 @@
 		EDF2D4DF1D9BD66400D1D138 /* PAAddViewControllerTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAAddViewControllerTwo.m; sourceTree = "<group>"; };
 		EDF2D4E11D9BEAF400D1D138 /* PAAddDetailViewControllerTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAAddDetailViewControllerTwo.h; sourceTree = "<group>"; };
 		EDF2D4E21D9BEAF400D1D138 /* PAAddDetailViewControllerTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAAddDetailViewControllerTwo.m; sourceTree = "<group>"; };
+		EDF2D4E41D9CFE5D00D1D138 /* TLTagsControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLTagsControl.h; sourceTree = "<group>"; };
+		EDF2D4E51D9CFE5D00D1D138 /* TLTagsControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLTagsControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +180,8 @@
 				ED6E834F1D995B6600DA54FA /* PAReviewTableViewCell.m */,
 				ED6E83501D995B6600DA54FA /* PAReviewTableViewCell.xib */,
 				ED6E83181D992FCA00DA54FA /* Main.storyboard */,
+				EDF2D4E41D9CFE5D00D1D138 /* TLTagsControl.h */,
+				EDF2D4E51D9CFE5D00D1D138 /* TLTagsControl.m */,
 				ED6E831B1D992FCA00DA54FA /* Assets.xcassets */,
 				ED6E831D1D992FCA00DA54FA /* LaunchScreen.storyboard */,
 				ED6E83201D992FCA00DA54FA /* Info.plist */,
@@ -333,6 +338,7 @@
 				ED6E83171D992FCA00DA54FA /* ViewController.m in Sources */,
 				ED6E83141D992FCA00DA54FA /* AppDelegate.m in Sources */,
 				ED6E83311D9935EA00DA54FA /* PADetailViewController.m in Sources */,
+				EDF2D4E61D9CFE5D00D1D138 /* TLTagsControl.m in Sources */,
 				ED6E833E1D994E7900DA54FA /* PAColor.m in Sources */,
 				ED6E834C1D9957B500DA54FA /* PAWorkingHoursTableViewCell.m in Sources */,
 				EDF2D4E01D9BD66400D1D138 /* PAAddViewControllerTwo.m in Sources */,
