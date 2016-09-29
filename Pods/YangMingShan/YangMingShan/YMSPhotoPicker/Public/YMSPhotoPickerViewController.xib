@@ -57,7 +57,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAV-ew-wFk">
-                    <color key="backgroundColor" red="0.74117647060000003" green="0.031372549020000001" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.95686274509803915" green="0.2627450980392157" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="S4n-2Y-xPz"/>
                         <constraint firstAttribute="width" constant="44" id="mwj-W7-kzv"/>
@@ -94,7 +94,7 @@
         <image name="close" width="38" height="38"/>
         <image name="closeSelected" width="38" height="38"/>
         <image name="dropDown" width="17" height="17"/>
-        <image name="next" width="50" height="50"/>
-        <image name="nextSelected" width="50" height="50"/>
+        <image name="next" width="28" height="28"/>
+        <image name="nextSelected" width="28" height="28"/>
     </resources>
 </document>

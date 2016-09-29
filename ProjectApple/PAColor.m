@@ -17,11 +17,11 @@
 @implementation PAColor
 
 +(UIColor*)appleRed{
-    return UIColorFromRGB(0xbd081c);
+    return UIColorFromRGB(0xF44336);
 }
 
 +(UIColor*)appleGreen{
-    return UIColorFromRGB(0x1cbd08);
+    return UIColorFromRGB(0x4CAF50);
 }
 
 @end

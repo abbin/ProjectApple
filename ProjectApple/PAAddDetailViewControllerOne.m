@@ -8,10 +8,12 @@
 
 #import "PAAddDetailViewControllerOne.h"
 #import "PAAddViewControllerTwo.h"
+#import "PAColor.h"
 
 @interface PAAddDetailViewControllerOne ()
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
 
 @end
 
@@ -20,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.scrollView setContentInset:UIEdgeInsetsMake(64, 0, 0, 0)];
+    self.nextButton.backgroundColor = [PAColor appleRed];
 }
 
 - (IBAction)back:(id)sender {

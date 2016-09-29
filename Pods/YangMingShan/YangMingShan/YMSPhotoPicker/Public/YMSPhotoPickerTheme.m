@@ -43,8 +43,8 @@
 
 - (void)reset
 {
-    self.tintColor = UIColorFromRGB(0xbd081c);
-    self.orderTintColor = UIColorFromRGB(0xca3949);
+    self.tintColor = UIColorFromRGB(0xF44336);
+    self.orderTintColor = UIColorFromRGB(0xF44336);
     self.cameraVeilColor = [UIColor colorWithWhite:0 alpha:0.5];
     
     self.orderLabelTextColor = self.navigationBarBackgroundColor = self.cameraIconColor = [UIColor whiteColor];

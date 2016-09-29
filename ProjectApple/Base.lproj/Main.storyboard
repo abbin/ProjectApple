@@ -218,6 +218,7 @@
                     </view>
                     <connections>
                         <outlet property="nameTextField" destination="b8X-zn-4k9" id="4ny-1M-Rut"/>
+                        <outlet property="nextButton" destination="0Y2-jS-GDA" id="UN4-c5-zXS"/>
                         <outlet property="toolBar" destination="Dsy-bn-60H" id="WNj-eV-4Bn"/>
                     </connections>
                 </viewController>
@@ -227,7 +228,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Y2-jS-GDA">
-                            <color key="backgroundColor" red="0.74117647060000003" green="0.031372549020000001" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.90196078431372551" green="0.0" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="92P-3t-43Y"/>
                                 <constraint firstAttribute="width" constant="44" id="E1F-bE-2cg"/>
@@ -369,7 +370,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7YO-JR-mb4">
-                                <color key="backgroundColor" red="0.74117647060000003" green="0.031372549020000001" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.90196078431372551" green="0.0" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="Fe7-uL-3N0"/>
                                     <constraint firstAttribute="height" constant="44" id="HaW-pG-IZt"/>
@@ -398,6 +399,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nextButton" destination="7YO-JR-mb4" id="8b8-8S-Ghg"/>
                         <outlet property="scrollView" destination="EgV-H2-l0f" id="wke-Hr-gA4"/>
                     </connections>
                 </viewController>
@@ -466,6 +468,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nextButton" destination="ZDe-dW-MZ5" id="J3D-Vc-GT3"/>
                         <outlet property="restNameTextField" destination="dbp-fr-5eA" id="Wu6-Z4-Nkm"/>
                         <outlet property="tooBar" destination="gIV-aD-fA3" id="UnK-If-hDA"/>
                     </connections>
@@ -476,7 +479,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDe-dW-MZ5">
-                            <color key="backgroundColor" red="0.74117647060000003" green="0.031372549020000001" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.90196078431372551" green="0.0" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="44" id="9kC-KK-VmK"/>
                                 <constraint firstAttribute="height" constant="44" id="LhE-t2-PfD"/>
@@ -487,7 +490,6 @@
                             <state key="highlighted" image="nextSelected"/>
                             <connections>
                                 <action selector="next:" destination="Aq7-fm-eqc" eventType="touchUpInside" id="F2F-y9-HJg"/>
-                                <action selector="next:" destination="U3E-20-00Q" eventType="touchUpInside" id="WUo-V8-xuo"/>
                             </connections>
                         </button>
                     </subviews>

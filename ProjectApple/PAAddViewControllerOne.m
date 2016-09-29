@@ -8,12 +8,14 @@
 
 #import "PAAddViewControllerOne.h"
 #import "PAAddDetailViewControllerOne.h"
+#import "PAColor.h"
 
 @interface PAAddViewControllerOne ()<UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 
 @property (strong, nonatomic) IBOutlet UIView *toolBar;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
 
 @end
 
@@ -24,6 +26,7 @@
     [self.nameTextField becomeFirstResponder];
     self.nameTextField.inputAccessoryView = self.toolBar;
     [self.navigationController.interactivePopGestureRecognizer setDelegate:self];
+    self.nextButton.backgroundColor = [PAColor appleRed];
 }
 
 -(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
