@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "PAManager.h"
+#import "PAUser.h"
+#import "FirstLaunchViewController.h"
+#import "RootViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +21,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    if (![PAManager isLocationSet]) {
+        if (![PAUser currentUser]) {
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            FirstLaunchViewController *rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"FirstLaunchViewController"];
+            self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+            self.window.rootViewController = rootViewController;
+            [self.window makeKeyAndVisible];
+        }
+        else{
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            RootViewController *rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"RootViewController"];
+            self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+            self.window.rootViewController = rootViewController;
+            [self.window makeKeyAndVisible];
+        }
+    }
     
     return YES;
 }

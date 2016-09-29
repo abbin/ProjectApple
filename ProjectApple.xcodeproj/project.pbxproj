@@ -40,6 +40,10 @@
 		EDF2D5241D9D4ED100D1D138 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2D51F1D9D4ED100D1D138 /* RootViewController.m */; };
 		EDF2D5251D9D4ED100D1D138 /* ViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2D5211D9D4ED100D1D138 /* ViewControllerThree.m */; };
 		EDF2D5261D9D4ED100D1D138 /* ViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2D5231D9D4ED100D1D138 /* ViewControllerTwo.m */; };
+		EDF2D5341D9D6F4E00D1D138 /* FirstLaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2D5331D9D6F4E00D1D138 /* FirstLaunchViewController.m */; };
+		EDF2D5371D9D752500D1D138 /* PAManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2D5361D9D752500D1D138 /* PAManager.m */; };
+		EDF2D53A1D9D756100D1D138 /* PAConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2D5391D9D756100D1D138 /* PAConstants.m */; };
+		EDF2D53E1D9D78CD00D1D138 /* PAUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2D53D1D9D78CD00D1D138 /* PAUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +103,14 @@
 		EDF2D5211D9D4ED100D1D138 /* ViewControllerThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerThree.m; sourceTree = "<group>"; };
 		EDF2D5221D9D4ED100D1D138 /* ViewControllerTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerTwo.h; sourceTree = "<group>"; };
 		EDF2D5231D9D4ED100D1D138 /* ViewControllerTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTwo.m; sourceTree = "<group>"; };
+		EDF2D5321D9D6F4E00D1D138 /* FirstLaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstLaunchViewController.h; sourceTree = "<group>"; };
+		EDF2D5331D9D6F4E00D1D138 /* FirstLaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLaunchViewController.m; sourceTree = "<group>"; };
+		EDF2D5351D9D752500D1D138 /* PAManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAManager.h; sourceTree = "<group>"; };
+		EDF2D5361D9D752500D1D138 /* PAManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAManager.m; sourceTree = "<group>"; };
+		EDF2D5381D9D756100D1D138 /* PAConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAConstants.h; sourceTree = "<group>"; };
+		EDF2D5391D9D756100D1D138 /* PAConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAConstants.m; sourceTree = "<group>"; };
+		EDF2D53C1D9D78CD00D1D138 /* PAUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAUser.h; sourceTree = "<group>"; };
+		EDF2D53D1D9D78CD00D1D138 /* PAUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,11 +190,8 @@
 		EDF2D5271D9D6D0400D1D138 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				EDF2D51E1D9D4ED100D1D138 /* RootViewController.h */,
-				EDF2D51F1D9D4ED100D1D138 /* RootViewController.m */,
-				EDF2D52B1D9D6D9300D1D138 /* PageOne */,
-				EDF2D52C1D9D6DA800D1D138 /* PageTwo */,
-				EDF2D52D1D9D6DAF00D1D138 /* PageThree */,
+				EDF2D5311D9D6E6B00D1D138 /* Outer */,
+				EDF2D5301D9D6E6300D1D138 /* Inner */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -190,6 +199,11 @@
 		EDF2D5281D9D6D2B00D1D138 /* Modals */ = {
 			isa = PBXGroup;
 			children = (
+				EDF2D5351D9D752500D1D138 /* PAManager.h */,
+				EDF2D5361D9D752500D1D138 /* PAManager.m */,
+				EDF2D5381D9D756100D1D138 /* PAConstants.h */,
+				EDF2D5391D9D756100D1D138 /* PAConstants.m */,
+				EDF2D53B1D9D78B500D1D138 /* User */,
 			);
 			name = Modals;
 			sourceTree = "<group>";
@@ -285,6 +299,36 @@
 				EDF2D52A1D9D6D6200D1D138 /* CollectionViewCells */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		EDF2D5301D9D6E6300D1D138 /* Inner */ = {
+			isa = PBXGroup;
+			children = (
+				EDF2D51E1D9D4ED100D1D138 /* RootViewController.h */,
+				EDF2D51F1D9D4ED100D1D138 /* RootViewController.m */,
+				EDF2D52B1D9D6D9300D1D138 /* PageOne */,
+				EDF2D52C1D9D6DA800D1D138 /* PageTwo */,
+				EDF2D52D1D9D6DAF00D1D138 /* PageThree */,
+			);
+			name = Inner;
+			sourceTree = "<group>";
+		};
+		EDF2D5311D9D6E6B00D1D138 /* Outer */ = {
+			isa = PBXGroup;
+			children = (
+				EDF2D5321D9D6F4E00D1D138 /* FirstLaunchViewController.h */,
+				EDF2D5331D9D6F4E00D1D138 /* FirstLaunchViewController.m */,
+			);
+			name = Outer;
+			sourceTree = "<group>";
+		};
+		EDF2D53B1D9D78B500D1D138 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				EDF2D53C1D9D78CD00D1D138 /* PAUser.h */,
+				EDF2D53D1D9D78CD00D1D138 /* PAUser.m */,
+			);
+			name = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,18 +467,22 @@
 				ED9704261D9ABF1200ABADD0 /* PAAddDetailViewControllerOne.m in Sources */,
 				EDF2D5251D9D4ED100D1D138 /* ViewControllerThree.m in Sources */,
 				ED6E83351D99438C00DA54FA /* PADetailHeadingTableViewCell.m in Sources */,
+				EDF2D5371D9D752500D1D138 /* PAManager.m in Sources */,
 				ED6E83171D992FCA00DA54FA /* ViewController.m in Sources */,
 				ED6E83141D992FCA00DA54FA /* AppDelegate.m in Sources */,
 				ED6E83311D9935EA00DA54FA /* PADetailViewController.m in Sources */,
 				EDF2D4E61D9CFE5D00D1D138 /* TLTagsControl.m in Sources */,
 				ED6E833E1D994E7900DA54FA /* PAColor.m in Sources */,
 				ED6E834C1D9957B500DA54FA /* PAWorkingHoursTableViewCell.m in Sources */,
+				EDF2D5341D9D6F4E00D1D138 /* FirstLaunchViewController.m in Sources */,
 				EDF2D4E01D9BD66400D1D138 /* PAAddViewControllerTwo.m in Sources */,
 				ED6E833A1D99475D00DA54FA /* FALabelTableViewCell.m in Sources */,
+				EDF2D53A1D9D756100D1D138 /* PAConstants.m in Sources */,
 				ED6E83111D992FCA00DA54FA /* main.m in Sources */,
 				ED6E83511D995B6600DA54FA /* PAReviewTableViewCell.m in Sources */,
 				ED6E83291D99320100DA54FA /* PANearbyTableViewCell.m in Sources */,
 				EDF2D5261D9D4ED100D1D138 /* ViewControllerTwo.m in Sources */,
+				EDF2D53E1D9D78CD00D1D138 /* PAUser.m in Sources */,
 				EDF2D5241D9D4ED100D1D138 /* RootViewController.m in Sources */,
 				ED6E83471D9952D400DA54FA /* PAImageViewCollectionViewCell.m in Sources */,
 				ED6E83421D994F7400DA54FA /* PACollectionTableViewCell.m in Sources */,

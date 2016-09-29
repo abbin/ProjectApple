@@ -739,6 +739,24 @@
             </objects>
             <point key="canvasLocation" x="4263.1999999999998" y="177.21139430284859"/>
         </scene>
+        <!--First Launch View Controller-->
+        <scene sceneID="rFX-HI-OWH">
+            <objects>
+                <viewController storyboardIdentifier="FirstLaunchViewController" id="Py8-hd-Pt2" customClass="FirstLaunchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MtO-iV-tmR"/>
+                        <viewControllerLayoutGuide type="bottom" id="06d-Ta-ibw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6yF-QN-8lk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="12a-ON-feP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1548" y="1675"/>
+        </scene>
         <!--Root View Controller-->
         <scene sceneID="hWi-S4-eKx">
             <objects>
