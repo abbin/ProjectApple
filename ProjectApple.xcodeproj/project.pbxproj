@@ -38,6 +38,7 @@
 		ED88D2721DA25C77000AA002 /* IMG_0102.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ED88D2711DA25C77000AA002 /* IMG_0102.mp4 */; };
 		ED88D2751DA28E7E000AA002 /* PASignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED88D2741DA28E7E000AA002 /* PASignInViewController.m */; };
 		ED88D2781DA29BAF000AA002 /* PACurentLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED88D2771DA29BAF000AA002 /* PACurentLocationViewController.m */; };
+		ED88D27A1DA2D0E5000AA002 /* HomeLoc.gpx in Resources */ = {isa = PBXBuildFile; fileRef = ED88D2791DA2D0E5000AA002 /* HomeLoc.gpx */; };
 		ED9704231D9A5E2500ABADD0 /* PAAddViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9704221D9A5E2500ABADD0 /* PAAddViewControllerOne.m */; };
 		ED9704261D9ABF1200ABADD0 /* PAAddDetailViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9704251D9ABF1200ABADD0 /* PAAddDetailViewControllerOne.m */; };
 		EDF2D4E01D9BD66400D1D138 /* PAAddViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2D4DF1D9BD66400D1D138 /* PAAddViewControllerTwo.m */; };
@@ -104,6 +105,7 @@
 		ED88D2741DA28E7E000AA002 /* PASignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PASignInViewController.m; sourceTree = "<group>"; };
 		ED88D2761DA29BAF000AA002 /* PACurentLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PACurentLocationViewController.h; sourceTree = "<group>"; };
 		ED88D2771DA29BAF000AA002 /* PACurentLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PACurentLocationViewController.m; sourceTree = "<group>"; };
+		ED88D2791DA2D0E5000AA002 /* HomeLoc.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = HomeLoc.gpx; sourceTree = "<group>"; };
 		ED9704211D9A5E2500ABADD0 /* PAAddViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAAddViewControllerOne.h; sourceTree = "<group>"; };
 		ED9704221D9A5E2500ABADD0 /* PAAddViewControllerOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAAddViewControllerOne.m; sourceTree = "<group>"; };
 		ED9704241D9ABF1200ABADD0 /* PAAddDetailViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAAddDetailViewControllerOne.h; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 		ED6E830E1D992FCA00DA54FA /* ProjectApple */ = {
 			isa = PBXGroup;
 			children = (
+				ED88D2791DA2D0E5000AA002 /* HomeLoc.gpx */,
 				ED6E83121D992FCA00DA54FA /* AppDelegate.h */,
 				ED6E83131D992FCA00DA54FA /* AppDelegate.m */,
 				ED6E83181D992FCA00DA54FA /* Main.storyboard */,
@@ -422,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED6E83361D99438C00DA54FA /* PADetailHeadingTableViewCell.xib in Resources */,
+				ED88D27A1DA2D0E5000AA002 /* HomeLoc.gpx in Resources */,
 				ED6E831F1D992FCA00DA54FA /* LaunchScreen.storyboard in Resources */,
 				ED88D2721DA25C77000AA002 /* IMG_0102.mp4 in Resources */,
 				ED6E831C1D992FCA00DA54FA /* Assets.xcassets in Resources */,

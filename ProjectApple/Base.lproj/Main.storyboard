@@ -1031,6 +1031,7 @@
                     </view>
                     <connections>
                         <outlet property="label" destination="Zx2-oC-uN0" id="Col-pb-ktx"/>
+                        <outlet property="logInButton" destination="Uhv-ul-jIg" id="pK5-EJ-Uao"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qhB-ao-N5U" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1075,15 +1076,30 @@
                                 <state key="normal" title="Auto detect my location">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="autoDetectLocation:" destination="m8Q-wL-58I" eventType="touchUpInside" id="o5l-ep-VXW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R7L-mL-wce">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="lG6-4s-kRT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="manually set location">
+                                    <color key="titleColor" white="0.0" alpha="0.53941271551724135" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="E9y-bF-EZh" firstAttribute="width" secondItem="BmR-ti-oN2" secondAttribute="width" multiplier="0.8" id="4Xn-P5-xan"/>
                             <constraint firstItem="NZr-Q9-atT" firstAttribute="leading" secondItem="BmR-ti-oN2" secondAttribute="leading" constant="10" id="9uw-oT-AVu"/>
+                            <constraint firstAttribute="bottom" secondItem="R7L-mL-wce" secondAttribute="bottom" constant="10" id="Art-9n-R5a"/>
+                            <constraint firstItem="R7L-mL-wce" firstAttribute="top" secondItem="NZr-Q9-atT" secondAttribute="bottom" constant="20" id="FYg-Xc-Ua3"/>
                             <constraint firstItem="E9y-bF-EZh" firstAttribute="centerX" secondItem="BmR-ti-oN2" secondAttribute="centerX" multiplier="1.2" id="KVR-kZ-Tbz"/>
+                            <constraint firstAttribute="trailing" secondItem="R7L-mL-wce" secondAttribute="trailing" constant="10" id="M00-Cl-HaH"/>
                             <constraint firstAttribute="trailing" secondItem="NZr-Q9-atT" secondAttribute="trailing" constant="10" id="OXw-4N-6Jr"/>
-                            <constraint firstAttribute="bottom" secondItem="NZr-Q9-atT" secondAttribute="bottom" constant="20" id="dxV-uZ-ius"/>
+                            <constraint firstItem="R7L-mL-wce" firstAttribute="leading" secondItem="BmR-ti-oN2" secondAttribute="leading" constant="10" id="baH-Y8-E1s"/>
                             <constraint firstItem="E9y-bF-EZh" firstAttribute="centerY" secondItem="BmR-ti-oN2" secondAttribute="centerY" id="oCA-xd-mvc"/>
                         </constraints>
                     </view>

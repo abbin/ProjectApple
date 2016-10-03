@@ -10,7 +10,7 @@
 
 @interface PAUser : PFUser
 
-@property (nonatomic, strong) PFObject *profilePhoto;
+@property (nonatomic, strong) PFFile *profilePhoto;
 @property (nonatomic, strong) NSString *displayName;
 
 @end

@@ -10,4 +10,6 @@
 
 @interface PASignInViewController : UIViewController
 
+-(void)withCompletionHandler:(void(^)())handler;
+
 @end

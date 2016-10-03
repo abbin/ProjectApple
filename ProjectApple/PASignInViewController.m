@@ -7,10 +7,20 @@
 //
 
 #import "PASignInViewController.h"
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import "PAUser.h"
+#import "PAManager.h"
+#import "PACurentLocationViewController.h"
+#import "RootViewController.h"
+#import "AppDelegate.h"
 
-@interface PASignInViewController ()
+@interface PASignInViewController ()<FBSDKLoginButtonDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet FBSDKLoginButton *logInButton;
+
+@property (nonatomic, strong) void(^completionHandler)();
 
 @end
 
@@ -19,8 +29,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     int height = [UIScreen mainScreen].bounds.size.height/2;
-    int width = (height*9)/16;
-    UIImageView *imageview = [[UIImageView alloc]initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width-width+width/4,
+    int width = ((height*9)/16)/3*2;
+    UIImageView *imageview = [[UIImageView alloc]initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width-width,
                                                                           [UIScreen mainScreen].bounds.size.height/16,
                                                                           width,
                                                                           height)];
@@ -48,21 +58,99 @@
                   value:[UIColor colorWithWhite:0 alpha:0.8]
                   range:NSMakeRange(57, 9)];
     self.label.attributedText = hogan;
+    
+    self.logInButton.delegate = self;
+    self.logInButton.readPermissions = @[@"public_profile", @"email", @"user_friends"];
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)loginButton:(FBSDKLoginButton *)loginButton didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result error:(NSError *)error{
+    if (error == nil && [FBSDKAccessToken currentAccessToken].tokenString) {
+        [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:@{ @"fields" : @"id,first_name,last_name,email,picture.width(100).height(100)"}]startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+            if (!error) {
+                if ([result objectForKey:@"email"]) {
+                    PAUser *user = [PAUser user];
+                    user.password = @"password";
+                    user.email = [result objectForKey:@"email"];
+                    user.username = [result objectForKey:@"email"];
+                    user.displayName = [NSString stringWithFormat:@"%@ %@",[result objectForKey:@"first_name"],[result objectForKey:@"last_name"]];
+                    NSString *url = [[[result objectForKey:@"picture"] objectForKey:@"data"] objectForKey:@"url"];
+                    
+                    PFFile *image;
+                    if (url.length>0) {
+                        image = [PFFile fileWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:url]]];
+                    }
+                    user.profilePhoto = image;
+                    
+                    [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                        if (!error) {
+                            if (![PAManager isLocationSet]) {
+                                if ([self isModal]) {
+                                    PACurentLocationViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PACurentLocationViewController"];
+                                    [self.navigationController pushViewController:vc animated:YES];
+                                }
+                                else{
+                                    _completionHandler();
+                                }
+                            }
+                            else{
+                                if ([self isModal]) {
+                                    [self dismissViewControllerAnimated:YES completion:nil];
+                                }
+                                else{
+                                    RootViewController *rootViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"RootViewController"];
+                                    AppDelegate *delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+                                    [delegate changeRootViewController:rootViewController];
+                                }
+                            }
+                        }else{
+                            if (error.code == 202 || error.code == 203) {
+                                [PFUser logInWithUsernameInBackground:[result objectForKey:@"email"] password:@"password"
+                                                                block:^(PFUser *user, NSError *error) {
+                                                                    if (user && error == nil) {
+                                                                        if (![PAManager isLocationSet]) {
+                                                                            if ([self isModal]) {
+                                                                                PACurentLocationViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PACurentLocationViewController"];
+                                                                                [self.navigationController pushViewController:vc animated:YES];
+                                                                            }
+                                                                            else{
+                                                                                _completionHandler();
+                                                                            }
+                                                                        }
+                                                                        else{
+                                                                            if ([self isModal]) {
+                                                                                [self dismissViewControllerAnimated:YES completion:nil];
+                                                                            }
+                                                                            else{
+                                                                                RootViewController *rootViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"RootViewController"];
+                                                                                AppDelegate *delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+                                                                                [delegate changeRootViewController:rootViewController];
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }];
+                            }
+                        }
+                    }];
+                    
+                }
+            }
+        }];
+    }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton{
+    
 }
-*/
+
+- (BOOL)isModal {
+    return self.presentingViewController.presentedViewController == self
+    || (self.navigationController != nil && self.navigationController.presentingViewController.presentedViewController == self.navigationController)
+    || [self.tabBarController.presentingViewController isKindOfClass:[UITabBarController class]];
+}
+
+-(void)withCompletionHandler:(void(^)())handler{
+    _completionHandler = handler;
+}
 
 @end

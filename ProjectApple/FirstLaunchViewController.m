@@ -13,6 +13,8 @@
 #import <AVFoundation/AVFoundation.h>
 #import "PASignInViewController.h"
 #import "PACurentLocationViewController.h"
+#import "PAUser.h"
+#import "PAManager.h"
 
 @interface FirstLaunchViewController ()<UIPageViewControllerDataSource,UIPageViewControllerDelegate>
 
@@ -34,9 +36,19 @@
     pageControl.backgroundColor = [UIColor clearColor];
     
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"FirstLaunchPageViewController"];
-    FirstLaunchViewControllerOne *startingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"FirstLaunchViewControllerOne"];
-    NSArray *viewControllers = @[startingViewController];
-    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    
+    if ([PAUser currentUser]) {
+        PACurentLocationViewController *startingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PACurentLocationViewController"];
+        NSArray *viewControllers = @[startingViewController];
+        [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    }
+    else{
+        FirstLaunchViewControllerOne *startingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"FirstLaunchViewControllerOne"];
+        NSArray *viewControllers = @[startingViewController];
+        [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    }
+    
+    
     
     self.pageViewController.dataSource = self;
     self.pageViewController.delegate = self;
@@ -123,6 +135,10 @@
     }
     else if (([viewController.restorationIdentifier isEqualToString:@"PACurentLocationViewController"])){
         PASignInViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PASignInViewController"];
+        [vc withCompletionHandler:^{
+            PACurentLocationViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PACurentLocationViewController"];
+            [self.pageViewController setViewControllers:@[vc] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+        }];
         return vc;
     }
     else{
@@ -141,6 +157,10 @@
     }
     else if (([viewController.restorationIdentifier isEqualToString:@"FirstLaunchViewControllerThree"])){
         PASignInViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PASignInViewController"];
+        [vc withCompletionHandler:^{
+            PACurentLocationViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PACurentLocationViewController"];
+            [self.pageViewController setViewControllers:@[vc] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+        }];
         return vc;
     }
     else if (([viewController.restorationIdentifier isEqualToString:@"PASignInViewController"])){
