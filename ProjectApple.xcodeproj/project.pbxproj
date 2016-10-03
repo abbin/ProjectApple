@@ -32,6 +32,10 @@
 		ED6E834D1D9957B500DA54FA /* PAWorkingHoursTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED6E834B1D9957B500DA54FA /* PAWorkingHoursTableViewCell.xib */; };
 		ED6E83511D995B6600DA54FA /* PAReviewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED6E834F1D995B6600DA54FA /* PAReviewTableViewCell.m */; };
 		ED6E83521D995B6600DA54FA /* PAReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED6E83501D995B6600DA54FA /* PAReviewTableViewCell.xib */; };
+		ED88D26A1DA254E2000AA002 /* FirstLaunchViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = ED88D2691DA254E2000AA002 /* FirstLaunchViewControllerOne.m */; };
+		ED88D26D1DA254F4000AA002 /* FirstLaunchViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = ED88D26C1DA254F4000AA002 /* FirstLaunchViewControllerTwo.m */; };
+		ED88D2701DA25505000AA002 /* FirstLaunchViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = ED88D26F1DA25505000AA002 /* FirstLaunchViewControllerThree.m */; };
+		ED88D2721DA25C77000AA002 /* IMG_0102.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ED88D2711DA25C77000AA002 /* IMG_0102.mp4 */; };
 		ED9704231D9A5E2500ABADD0 /* PAAddViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9704221D9A5E2500ABADD0 /* PAAddViewControllerOne.m */; };
 		ED9704261D9ABF1200ABADD0 /* PAAddDetailViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9704251D9ABF1200ABADD0 /* PAAddDetailViewControllerOne.m */; };
 		EDF2D4E01D9BD66400D1D138 /* PAAddViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2D4DF1D9BD66400D1D138 /* PAAddViewControllerTwo.m */; };
@@ -87,6 +91,13 @@
 		ED6E834E1D995B6600DA54FA /* PAReviewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAReviewTableViewCell.h; sourceTree = "<group>"; };
 		ED6E834F1D995B6600DA54FA /* PAReviewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAReviewTableViewCell.m; sourceTree = "<group>"; };
 		ED6E83501D995B6600DA54FA /* PAReviewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PAReviewTableViewCell.xib; sourceTree = "<group>"; };
+		ED88D2681DA254E2000AA002 /* FirstLaunchViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstLaunchViewControllerOne.h; sourceTree = "<group>"; };
+		ED88D2691DA254E2000AA002 /* FirstLaunchViewControllerOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLaunchViewControllerOne.m; sourceTree = "<group>"; };
+		ED88D26B1DA254F4000AA002 /* FirstLaunchViewControllerTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstLaunchViewControllerTwo.h; sourceTree = "<group>"; };
+		ED88D26C1DA254F4000AA002 /* FirstLaunchViewControllerTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLaunchViewControllerTwo.m; sourceTree = "<group>"; };
+		ED88D26E1DA25505000AA002 /* FirstLaunchViewControllerThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstLaunchViewControllerThree.h; sourceTree = "<group>"; };
+		ED88D26F1DA25505000AA002 /* FirstLaunchViewControllerThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLaunchViewControllerThree.m; sourceTree = "<group>"; };
+		ED88D2711DA25C77000AA002 /* IMG_0102.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = IMG_0102.mp4; sourceTree = "<group>"; };
 		ED9704211D9A5E2500ABADD0 /* PAAddViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAAddViewControllerOne.h; sourceTree = "<group>"; };
 		ED9704221D9A5E2500ABADD0 /* PAAddViewControllerOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAAddViewControllerOne.m; sourceTree = "<group>"; };
 		ED9704241D9ABF1200ABADD0 /* PAAddDetailViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAAddDetailViewControllerOne.h; sourceTree = "<group>"; };
@@ -174,6 +185,7 @@
 				ED6E83201D992FCA00DA54FA /* Info.plist */,
 				ED6E832B1D99354100DA54FA /* food-photography-perth3.jpg */,
 				ED6E832C1D99354100DA54FA /* 10376198_740619292643932_6358245269005609953_n (1).jpg */,
+				ED88D2711DA25C77000AA002 /* IMG_0102.mp4 */,
 				ED6E830F1D992FCA00DA54FA /* Supporting Files */,
 			);
 			path = ProjectApple;
@@ -318,6 +330,12 @@
 			children = (
 				EDF2D5321D9D6F4E00D1D138 /* FirstLaunchViewController.h */,
 				EDF2D5331D9D6F4E00D1D138 /* FirstLaunchViewController.m */,
+				ED88D2681DA254E2000AA002 /* FirstLaunchViewControllerOne.h */,
+				ED88D2691DA254E2000AA002 /* FirstLaunchViewControllerOne.m */,
+				ED88D26B1DA254F4000AA002 /* FirstLaunchViewControllerTwo.h */,
+				ED88D26C1DA254F4000AA002 /* FirstLaunchViewControllerTwo.m */,
+				ED88D26E1DA25505000AA002 /* FirstLaunchViewControllerThree.h */,
+				ED88D26F1DA25505000AA002 /* FirstLaunchViewControllerThree.m */,
 			);
 			name = Outer;
 			sourceTree = "<group>";
@@ -395,6 +413,7 @@
 			files = (
 				ED6E83361D99438C00DA54FA /* PADetailHeadingTableViewCell.xib in Resources */,
 				ED6E831F1D992FCA00DA54FA /* LaunchScreen.storyboard in Resources */,
+				ED88D2721DA25C77000AA002 /* IMG_0102.mp4 in Resources */,
 				ED6E831C1D992FCA00DA54FA /* Assets.xcassets in Resources */,
 				ED6E833B1D99475D00DA54FA /* FALabelTableViewCell.xib in Resources */,
 				ED6E83521D995B6600DA54FA /* PAReviewTableViewCell.xib in Resources */,
@@ -464,6 +483,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED9704231D9A5E2500ABADD0 /* PAAddViewControllerOne.m in Sources */,
+				ED88D26D1DA254F4000AA002 /* FirstLaunchViewControllerTwo.m in Sources */,
 				ED9704261D9ABF1200ABADD0 /* PAAddDetailViewControllerOne.m in Sources */,
 				EDF2D5251D9D4ED100D1D138 /* ViewControllerThree.m in Sources */,
 				ED6E83351D99438C00DA54FA /* PADetailHeadingTableViewCell.m in Sources */,
@@ -476,6 +496,7 @@
 				ED6E834C1D9957B500DA54FA /* PAWorkingHoursTableViewCell.m in Sources */,
 				EDF2D5341D9D6F4E00D1D138 /* FirstLaunchViewController.m in Sources */,
 				EDF2D4E01D9BD66400D1D138 /* PAAddViewControllerTwo.m in Sources */,
+				ED88D2701DA25505000AA002 /* FirstLaunchViewControllerThree.m in Sources */,
 				ED6E833A1D99475D00DA54FA /* FALabelTableViewCell.m in Sources */,
 				EDF2D53A1D9D756100D1D138 /* PAConstants.m in Sources */,
 				ED6E83111D992FCA00DA54FA /* main.m in Sources */,
@@ -486,6 +507,7 @@
 				EDF2D5241D9D4ED100D1D138 /* RootViewController.m in Sources */,
 				ED6E83471D9952D400DA54FA /* PAImageViewCollectionViewCell.m in Sources */,
 				ED6E83421D994F7400DA54FA /* PACollectionTableViewCell.m in Sources */,
+				ED88D26A1DA254E2000AA002 /* FirstLaunchViewControllerOne.m in Sources */,
 				EDF2D4E31D9BEAF400D1D138 /* PAAddDetailViewControllerTwo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
