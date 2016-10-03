@@ -11,6 +11,8 @@
 #import "FirstLaunchViewControllerTwo.h"
 #import "FirstLaunchViewControllerThree.h"
 #import <AVFoundation/AVFoundation.h>
+#import "PASignInViewController.h"
+#import "PACurentLocationViewController.h"
 
 @interface FirstLaunchViewController ()<UIPageViewControllerDataSource,UIPageViewControllerDelegate>
 
@@ -25,6 +27,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIPageControl *pageControl = [UIPageControl appearance];
+    pageControl.pageIndicatorTintColor = [UIColor colorWithWhite:0 alpha:0.1];
+    pageControl.currentPageIndicatorTintColor = [UIColor colorWithWhite:0 alpha:0.2];
+    pageControl.backgroundColor = [UIColor clearColor];
     
     self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"FirstLaunchPageViewController"];
     FirstLaunchViewControllerOne *startingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"FirstLaunchViewControllerOne"];
@@ -110,6 +117,14 @@
         FirstLaunchViewControllerTwo *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"FirstLaunchViewControllerTwo"];
         return vc;
     }
+    else if (([viewController.restorationIdentifier isEqualToString:@"PASignInViewController"])){
+        FirstLaunchViewControllerThree *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"FirstLaunchViewControllerThree"];
+        return vc;
+    }
+    else if (([viewController.restorationIdentifier isEqualToString:@"PACurentLocationViewController"])){
+        PASignInViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PASignInViewController"];
+        return vc;
+    }
     else{
         return nil;
     }
@@ -124,9 +139,27 @@
         FirstLaunchViewControllerThree *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"FirstLaunchViewControllerThree"];
         return vc;
     }
+    else if (([viewController.restorationIdentifier isEqualToString:@"FirstLaunchViewControllerThree"])){
+        PASignInViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PASignInViewController"];
+        return vc;
+    }
+    else if (([viewController.restorationIdentifier isEqualToString:@"PASignInViewController"])){
+        PACurentLocationViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PACurentLocationViewController"];
+        return vc;
+    }
     else{
         return nil;
     }
+}
+
+- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
+{
+    return 5;
+}
+
+- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
+{
+    return 0;
 }
 
 

@@ -36,6 +36,8 @@
 		ED88D26D1DA254F4000AA002 /* FirstLaunchViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = ED88D26C1DA254F4000AA002 /* FirstLaunchViewControllerTwo.m */; };
 		ED88D2701DA25505000AA002 /* FirstLaunchViewControllerThree.m in Sources */ = {isa = PBXBuildFile; fileRef = ED88D26F1DA25505000AA002 /* FirstLaunchViewControllerThree.m */; };
 		ED88D2721DA25C77000AA002 /* IMG_0102.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = ED88D2711DA25C77000AA002 /* IMG_0102.mp4 */; };
+		ED88D2751DA28E7E000AA002 /* PASignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED88D2741DA28E7E000AA002 /* PASignInViewController.m */; };
+		ED88D2781DA29BAF000AA002 /* PACurentLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED88D2771DA29BAF000AA002 /* PACurentLocationViewController.m */; };
 		ED9704231D9A5E2500ABADD0 /* PAAddViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9704221D9A5E2500ABADD0 /* PAAddViewControllerOne.m */; };
 		ED9704261D9ABF1200ABADD0 /* PAAddDetailViewControllerOne.m in Sources */ = {isa = PBXBuildFile; fileRef = ED9704251D9ABF1200ABADD0 /* PAAddDetailViewControllerOne.m */; };
 		EDF2D4E01D9BD66400D1D138 /* PAAddViewControllerTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = EDF2D4DF1D9BD66400D1D138 /* PAAddViewControllerTwo.m */; };
@@ -98,6 +100,10 @@
 		ED88D26E1DA25505000AA002 /* FirstLaunchViewControllerThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstLaunchViewControllerThree.h; sourceTree = "<group>"; };
 		ED88D26F1DA25505000AA002 /* FirstLaunchViewControllerThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLaunchViewControllerThree.m; sourceTree = "<group>"; };
 		ED88D2711DA25C77000AA002 /* IMG_0102.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = IMG_0102.mp4; sourceTree = "<group>"; };
+		ED88D2731DA28E7E000AA002 /* PASignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PASignInViewController.h; sourceTree = "<group>"; };
+		ED88D2741DA28E7E000AA002 /* PASignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PASignInViewController.m; sourceTree = "<group>"; };
+		ED88D2761DA29BAF000AA002 /* PACurentLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PACurentLocationViewController.h; sourceTree = "<group>"; };
+		ED88D2771DA29BAF000AA002 /* PACurentLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PACurentLocationViewController.m; sourceTree = "<group>"; };
 		ED9704211D9A5E2500ABADD0 /* PAAddViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAAddViewControllerOne.h; sourceTree = "<group>"; };
 		ED9704221D9A5E2500ABADD0 /* PAAddViewControllerOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAAddViewControllerOne.m; sourceTree = "<group>"; };
 		ED9704241D9ABF1200ABADD0 /* PAAddDetailViewControllerOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAAddDetailViewControllerOne.h; sourceTree = "<group>"; };
@@ -336,6 +342,10 @@
 				ED88D26C1DA254F4000AA002 /* FirstLaunchViewControllerTwo.m */,
 				ED88D26E1DA25505000AA002 /* FirstLaunchViewControllerThree.h */,
 				ED88D26F1DA25505000AA002 /* FirstLaunchViewControllerThree.m */,
+				ED88D2731DA28E7E000AA002 /* PASignInViewController.h */,
+				ED88D2741DA28E7E000AA002 /* PASignInViewController.m */,
+				ED88D2761DA29BAF000AA002 /* PACurentLocationViewController.h */,
+				ED88D2771DA29BAF000AA002 /* PACurentLocationViewController.m */,
 			);
 			name = Outer;
 			sourceTree = "<group>";
@@ -501,6 +511,8 @@
 				EDF2D53A1D9D756100D1D138 /* PAConstants.m in Sources */,
 				ED6E83111D992FCA00DA54FA /* main.m in Sources */,
 				ED6E83511D995B6600DA54FA /* PAReviewTableViewCell.m in Sources */,
+				ED88D2751DA28E7E000AA002 /* PASignInViewController.m in Sources */,
+				ED88D2781DA29BAF000AA002 /* PACurentLocationViewController.m in Sources */,
 				ED6E83291D99320100DA54FA /* PANearbyTableViewCell.m in Sources */,
 				EDF2D5261D9D4ED100D1D138 /* ViewControllerTwo.m in Sources */,
 				EDF2D53E1D9D78CD00D1D138 /* PAUser.m in Sources */,

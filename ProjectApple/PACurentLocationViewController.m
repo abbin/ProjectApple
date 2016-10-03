@@ -1,34 +1,25 @@
 //
-//  FirstLaunchViewControllerOne.m
+//  PACurentLocationViewController.m
 //  ProjectApple
 //
 //  Created by Abbin Varghese on 03/10/16.
 //  Copyright © 2016 ABN. All rights reserved.
 //
 
-#import "FirstLaunchViewControllerOne.h"
+#import "PACurentLocationViewController.h"
 
-@interface FirstLaunchViewControllerOne ()
+@interface PACurentLocationViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end
 
-@implementation FirstLaunchViewControllerOne
+@implementation PACurentLocationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    int height = [UIScreen mainScreen].bounds.size.height/2;
-    int width = (height*125)/667;
-    UIImageView *imageview = [[UIImageView alloc]initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width-width,
-                                                                          [UIScreen mainScreen].bounds.size.height/8,
-                                                                          width,
-                                                                          height)];
-    imageview.backgroundColor = [UIColor lightTextColor];
     
-    [self.view addSubview:imageview];
-    
-    NSString *string = @"Join FUUD\nDiscover great eats";
+    NSString *string = @"To get started, please set your location\n(or let us do it for you)";
     NSMutableAttributedString *hogan = [[NSMutableAttributedString alloc] initWithString:string];
     [hogan addAttribute:NSFontAttributeName
                   value:[UIFont fontWithName:@"HelveticaNeue-Light" size:25]
@@ -36,14 +27,13 @@
     
     [hogan addAttribute:NSFontAttributeName
                   value:[UIFont fontWithName:@"HelveticaNeue-Medium" size:25]
-                  range:NSMakeRange(5, 4)];
+                  range:NSMakeRange(32, 8)];
     [hogan addAttribute:NSForegroundColorAttributeName
                   value:[UIColor colorWithWhite:0 alpha:0.8]
-                  range:NSMakeRange(5, 4)];
+                  range:NSMakeRange(32, 8)];
     
     self.label.attributedText = hogan;
-
-
+    
 }
 
 - (void)didReceiveMemoryWarning {

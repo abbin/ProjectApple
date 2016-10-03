@@ -1,34 +1,34 @@
 //
-//  FirstLaunchViewControllerOne.m
+//  PASignInViewController.m
 //  ProjectApple
 //
 //  Created by Abbin Varghese on 03/10/16.
 //  Copyright © 2016 ABN. All rights reserved.
 //
 
-#import "FirstLaunchViewControllerOne.h"
+#import "PASignInViewController.h"
 
-@interface FirstLaunchViewControllerOne ()
+@interface PASignInViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end
 
-@implementation FirstLaunchViewControllerOne
+@implementation PASignInViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     int height = [UIScreen mainScreen].bounds.size.height/2;
-    int width = (height*125)/667;
-    UIImageView *imageview = [[UIImageView alloc]initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width-width,
-                                                                          [UIScreen mainScreen].bounds.size.height/8,
+    int width = (height*9)/16;
+    UIImageView *imageview = [[UIImageView alloc]initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width-width+width/4,
+                                                                          [UIScreen mainScreen].bounds.size.height/16,
                                                                           width,
                                                                           height)];
     imageview.backgroundColor = [UIColor lightTextColor];
     
     [self.view addSubview:imageview];
     
-    NSString *string = @"Join FUUD\nDiscover great eats";
+    NSString *string = @"Connect with Friends and know what they have been up to. Newsfeed!";
     NSMutableAttributedString *hogan = [[NSMutableAttributedString alloc] initWithString:string];
     [hogan addAttribute:NSFontAttributeName
                   value:[UIFont fontWithName:@"HelveticaNeue-Light" size:25]
@@ -36,14 +36,18 @@
     
     [hogan addAttribute:NSFontAttributeName
                   value:[UIFont fontWithName:@"HelveticaNeue-Medium" size:25]
-                  range:NSMakeRange(5, 4)];
+                  range:NSMakeRange(13, 7)];
     [hogan addAttribute:NSForegroundColorAttributeName
                   value:[UIColor colorWithWhite:0 alpha:0.8]
-                  range:NSMakeRange(5, 4)];
+                  range:NSMakeRange(13, 7)];
     
+    [hogan addAttribute:NSFontAttributeName
+                  value:[UIFont fontWithName:@"HelveticaNeue-Medium" size:25]
+                  range:NSMakeRange(57, 9)];
+    [hogan addAttribute:NSForegroundColorAttributeName
+                  value:[UIColor colorWithWhite:0 alpha:0.8]
+                  range:NSMakeRange(57, 9)];
     self.label.attributedText = hogan;
-
-
 }
 
 - (void)didReceiveMemoryWarning {
