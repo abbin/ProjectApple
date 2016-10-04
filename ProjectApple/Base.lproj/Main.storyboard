@@ -206,11 +206,15 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                 <connections>
                                     <action selector="textFieldEditingChanged:" destination="U3E-20-00Q" eventType="editingChanged" id="kza-c8-l1m"/>
+                                    <outlet property="delegate" destination="U3E-20-00Q" id="CHE-ZK-fad"/>
                                 </connections>
                             </textField>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="QP1-jy-n9d"/>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EFu-hM-tWh">
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="396" id="foj-qk-pGj"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="W4y-IJ-tvY" detailTextLabel="dpR-8k-sdr" style="IBUITableViewCellStyleSubtitle" id="KE4-hy-2ap">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -253,7 +257,7 @@
                             <constraint firstItem="5gQ-Oa-DZG" firstAttribute="top" secondItem="oGg-ag-iT0" secondAttribute="bottom" id="CW3-26-Dt3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5gQ-Oa-DZG" secondAttribute="trailing" id="EFn-Pj-gx5"/>
                             <constraint firstAttribute="trailing" secondItem="oGg-ag-iT0" secondAttribute="trailing" id="KOK-ME-bdW"/>
-                            <constraint firstAttribute="bottom" secondItem="EFu-hM-tWh" secondAttribute="bottom" id="OmF-29-EOm"/>
+                            <constraint firstAttribute="bottom" secondItem="EFu-hM-tWh" secondAttribute="bottom" constant="271" id="OmF-29-EOm"/>
                             <constraint firstItem="b8X-zn-4k9" firstAttribute="top" secondItem="5gQ-Oa-DZG" secondAttribute="bottom" constant="8" id="Q9u-HM-dhH"/>
                             <constraint firstItem="QP1-jy-n9d" firstAttribute="centerY" secondItem="b8X-zn-4k9" secondAttribute="centerY" id="aOO-a7-wvz"/>
                             <constraint firstAttribute="trailing" secondItem="EFu-hM-tWh" secondAttribute="trailing" id="eOR-h6-SCN"/>
@@ -261,7 +265,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="b8X-zn-4k9" secondAttribute="trailing" id="ffB-9z-91W"/>
                             <constraint firstItem="5gQ-Oa-DZG" firstAttribute="leading" secondItem="np8-pQ-kUd" secondAttribute="leadingMargin" id="lWB-1u-XBb"/>
                             <constraint firstItem="b8X-zn-4k9" firstAttribute="leading" secondItem="np8-pQ-kUd" secondAttribute="leadingMargin" constant="2" id="ySS-Ow-nqS"/>
-                            <constraint firstItem="EFu-hM-tWh" firstAttribute="top" secondItem="np8-pQ-kUd" secondAttribute="top" id="zJC-XG-daK"/>
                         </constraints>
                     </view>
                     <connections>
@@ -269,7 +272,7 @@
                         <outlet property="itemListTableView" destination="EFu-hM-tWh" id="y3h-t2-eL2"/>
                         <outlet property="nameTextField" destination="b8X-zn-4k9" id="4ny-1M-Rut"/>
                         <outlet property="tableViewBottomConstrain" destination="OmF-29-EOm" id="uyd-nB-XmG"/>
-                        <outlet property="tableViewTopConstrain" destination="zJC-XG-daK" id="fnK-Gz-yfw"/>
+                        <outlet property="tableViewHeightConstrain" destination="foj-qk-pGj" id="Apa-Ak-ZeD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v9l-Ju-NSG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -845,7 +848,7 @@
             <objects>
                 <navigationController storyboardIdentifier="ViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="v8R-Gs-XkG" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="08l-UQ-UGH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="08l-UQ-UGH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
