@@ -12,5 +12,14 @@
 
 NSString *const kPACurrentLocationKey                     = @"currentLocation";
 
+NSString *const kPALocationShortNameKey                     = @"locationShortName";
+NSString *const kPALocationLatitudeKey                      = @"locationLatitude";
+NSString *const kPALocationLongitudeKey                     = @"locationLongitude";
+NSString *const kPALocationFullNameKey                     = @"locationFullName";
 
+NSString *const kPAItemsClassNameKey                  = @"items";
+NSString *const kPAItemCappedNameKey                     = @"itemCappedName";
+
+NSString *const kPACuisineClassNameKey                     = @"cuisines";
+NSString *const kPARestaurantClassNameKey                = @"restaurants";
 @end

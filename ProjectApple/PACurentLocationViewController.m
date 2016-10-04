@@ -8,6 +8,9 @@
 
 #import "PACurentLocationViewController.h"
 #import <CoreLocation/CoreLocation.h>
+#import "PAConstants.h"
+#import "RootViewController.h"
+#import "AppDelegate.h"
 
 @interface PACurentLocationViewController ()<CLLocationManagerDelegate>
 
@@ -85,19 +88,20 @@
                 CLPlacemark *placemark = [placemarks lastObject];
                 NSDictionary *placemarkDict = placemark.addressDictionary;
                 NSMutableDictionary *loc = [NSMutableDictionary new];
-//                loc.locationShortName = [placemarkDict objectForKey:@"City"];
-//                loc.locationLatitude = [NSNumber numberWithDouble:currentLocation.coordinate.latitude];
-//                loc.locationLongitude = [NSNumber numberWithDouble:currentLocation.coordinate.longitude];
-//                NSArray * wordArray = [placemarkDict objectForKey:@"FormattedAddressLines"];
-//                NSString* nospacestring = [wordArray componentsJoinedByString:@", "];
-//                loc.locationFullName = nospacestring;
-//                
-//                [[NSUserDefaults standardUserDefaults] setObject:loc forKey:kMCurrentLocationKey];
-//                [[NSUserDefaults standardUserDefaults] synchronize];
-//                
-//                MTabBarController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"MTabBarController"];
-//                AppDelegate *delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-//                [delegate changeRootViewController:vc];
+                [loc setObject:[placemarkDict objectForKey:@"City"] forKey:kPALocationShortNameKey];
+                [loc setObject:[NSNumber numberWithDouble:currentLocation.coordinate.latitude] forKey:kPALocationLatitudeKey];
+                [loc setObject:[NSNumber numberWithDouble:currentLocation.coordinate.longitude] forKey:kPALocationLongitudeKey];
+                
+                NSArray * wordArray = [placemarkDict objectForKey:@"FormattedAddressLines"];
+                NSString* nospacestring = [wordArray componentsJoinedByString:@", "];
+                [loc setObject:nospacestring forKey:kPALocationFullNameKey];
+                
+                [[NSUserDefaults standardUserDefaults] setObject:loc forKey:kPACurrentLocationKey];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+                
+                RootViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"RootViewController"];
+                AppDelegate *delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+                [delegate changeRootViewController:vc];
             }
         } ];
     }

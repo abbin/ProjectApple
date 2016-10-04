@@ -10,4 +10,7 @@
 
 @interface PAAddDetailViewControllerOne : UIViewController
 
+@property (nonatomic, strong) NSString *itemName;
+@property (nonatomic, strong) NSMutableArray *images;
+
 @end

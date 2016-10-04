@@ -67,10 +67,12 @@
                         <constraint firstItem="g4r-tL-GAc" firstAttribute="centerY" secondItem="RXx-SH-9Q1" secondAttribute="centerY" id="wbY-WK-HW1"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAV-ew-wFk">
-                    <frame key="frameInset" minX="316" minY="608" width="44" height="44"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAV-ew-wFk">
                     <color key="backgroundColor" red="0.95686274509803915" green="0.2627450980392157" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="DSx-yn-Cft"/>
+                        <constraint firstAttribute="width" constant="44" id="kAK-4L-HwU"/>
+                    </constraints>
                     <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                     <state key="normal" image="next"/>
                     <state key="highlighted" image="nextSelected"/>
@@ -85,6 +87,8 @@
                 <constraint firstItem="4eg-zN-avL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7XB-ej-cGO"/>
                 <constraint firstItem="4eg-zN-avL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Djs-v4-De6"/>
                 <constraint firstItem="HDJ-gv-Wr9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="K5Y-QY-QeK"/>
+                <constraint firstAttribute="trailing" secondItem="dAV-ew-wFk" secondAttribute="trailing" constant="20" id="RIL-b7-qpr"/>
+                <constraint firstAttribute="bottom" secondItem="dAV-ew-wFk" secondAttribute="bottom" constant="20" id="Sc4-1v-gOk"/>
                 <constraint firstAttribute="bottom" secondItem="4eg-zN-avL" secondAttribute="bottom" id="Vmv-ww-mjw"/>
                 <constraint firstAttribute="trailing" secondItem="4eg-zN-avL" secondAttribute="trailing" id="X4h-UV-zm1"/>
                 <constraint firstAttribute="trailing" secondItem="HDJ-gv-Wr9" secondAttribute="trailing" id="ZFN-8K-Wau"/>
