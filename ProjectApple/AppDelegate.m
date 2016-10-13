@@ -27,8 +27,8 @@
                              didFinishLaunchingWithOptions:launchOptions];
     
     [Parse initializeWithConfiguration:[ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
-        configuration.applicationId = @"C4F3184BCDCD4AFC842AD0DA372399F6";
-        configuration.server = @"http://parseserver-3ix23-env.us-west-2.elasticbeanstalk.com/parse";
+        configuration.applicationId = @"4CC76E65966C420D95F7C4FF47CA0922";
+        configuration.server = @"http://developmentserver.herokuapp.com/parse";
     }]];
 
     if (![PAManager isLocationSet]) {

@@ -23,7 +23,6 @@
 
 @property (nonatomic, strong) PFQuery *query;
 @property (nonatomic, strong) NSMutableArray *itemsArray;
-@property (assign, nonatomic) int originalTopConstrain;
 
 @end
 
@@ -32,21 +31,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.navigationController.interactivePopGestureRecognizer setDelegate:self];
-    self.query = [PFQuery queryWithClassName:kPAItemsClassNameKey];
-    if (IS_IPHONE_6P) {
-        self.tableViewBottomConstrain.constant = 271;
-    }
-    else if(IS_IPHONE_6){
-        self.tableViewBottomConstrain.constant = 258;
-    }
-    else if(IS_IPHONE_5){
-        self.tableViewBottomConstrain.constant = 253;
-    }
-    else{
-        self.tableViewBottomConstrain.constant = 253;
-    }
     
+#if DEBUG
+    self.query = [PFQuery queryWithClassName:kPAItemsClassNameKey];
+#endif
+    
+    self.query.cachePolicy = kPFCachePolicyCacheElseNetwork;
     self.tableViewHeightConstrain.constant = 0;
+    
+    if (IS_IPHONE_4_OR_LESS) {
+        self.nameTextField.autocorrectionType = UITextAutocorrectionTypeNo;
+    }
 }
 
 -(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
@@ -61,6 +56,61 @@
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     [self.nameTextField resignFirstResponder];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardDidShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardDidHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillShowNotification
+                                                  object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillHideNotification
+                                                  object:nil];
+}
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#pragma mark - Notifications -
+
+- (void)keyboardDidShow: (NSNotification *) notification{
+    NSDictionary *info  = notification.userInfo;
+    NSValue      *value = info[UIKeyboardFrameEndUserInfoKey];
+    double        time  = [info[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    CGRect rawFrame      = [value CGRectValue];
+    CGRect keyboardFrame = [self.view convertRect:rawFrame fromView:nil];
+    
+    self.tableViewBottomConstrain.constant = keyboardFrame.size.height;
+    
+    [UIView animateWithDuration:time animations:^{
+        [self.view layoutIfNeeded];
+    }];
+}
+
+- (void)keyboardDidHide: (NSNotification *) notification{
+    NSDictionary *info  = notification.userInfo;
+    double        time  = [info[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    
+    self.tableViewBottomConstrain.constant = 0;
+    self.tableViewHeightConstrain.constant = 0;
+    
+    [UIView animateWithDuration:time animations:^{
+        [self.view layoutIfNeeded];
+    }];
 }
 
 
@@ -115,7 +165,7 @@
     if (textField.text.length>0) {
         self.tableViewHeightConstrain.constant = 44 *self.itemsArray.count;
         
-        [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:1 options:UIViewAnimationOptionAllowUserInteraction animations:^{
+        [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.8 initialSpringVelocity:1 options:UIViewAnimationOptionAllowUserInteraction animations:^{
             [self.view layoutIfNeeded];
         } completion:nil];
     }
@@ -124,7 +174,7 @@
 -(void)textFieldDidEndEditing:(UITextField *)textField{
     self.tableViewHeightConstrain.constant = 0;
     
-    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:1 options:UIViewAnimationOptionAllowUserInteraction animations:^{
+    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.8 initialSpringVelocity:1 options:UIViewAnimationOptionAllowUserInteraction animations:^{
         [self.view layoutIfNeeded];
     } completion:^(BOOL finished) {
         [self.itemListTableView reloadData];
@@ -160,7 +210,7 @@
         
                     self.tableViewHeightConstrain.constant = 44 *self.itemsArray.count;
                     
-                    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:1 options:UIViewAnimationOptionAllowUserInteraction animations:^{
+                    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.8 initialSpringVelocity:1 options:UIViewAnimationOptionAllowUserInteraction animations:^{
                         [self.view layoutIfNeeded];
                     } completion:nil];
                 }
@@ -176,7 +226,7 @@
                     
                     self.tableViewHeightConstrain.constant =  44;
                     
-                    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:0.5 options:UIViewAnimationOptionAllowUserInteraction animations:^{
+                    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.8 initialSpringVelocity:0.5 options:UIViewAnimationOptionAllowUserInteraction animations:^{
                         [self.view layoutIfNeeded];
                     } completion:nil];
                 }
@@ -187,7 +237,7 @@
         [self.activityIndicator stopAnimating];
         self.tableViewHeightConstrain.constant = 0;
         
-        [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:1 options:UIViewAnimationOptionAllowUserInteraction animations:^{
+        [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.8 initialSpringVelocity:1 options:UIViewAnimationOptionAllowUserInteraction animations:^{
             [self.view layoutIfNeeded];
         } completion:^(BOOL finished) {
             self.itemsArray = nil;

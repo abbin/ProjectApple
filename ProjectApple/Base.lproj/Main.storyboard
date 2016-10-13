@@ -211,9 +211,9 @@
                             </textField>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="QP1-jy-n9d"/>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EFu-hM-tWh">
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="396" id="foj-qk-pGj"/>
+                                    <constraint firstAttribute="height" constant="200" id="foj-qk-pGj"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="W4y-IJ-tvY" detailTextLabel="dpR-8k-sdr" style="IBUITableViewCellStyleSubtitle" id="KE4-hy-2ap">
@@ -257,7 +257,7 @@
                             <constraint firstItem="5gQ-Oa-DZG" firstAttribute="top" secondItem="oGg-ag-iT0" secondAttribute="bottom" id="CW3-26-Dt3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5gQ-Oa-DZG" secondAttribute="trailing" id="EFn-Pj-gx5"/>
                             <constraint firstAttribute="trailing" secondItem="oGg-ag-iT0" secondAttribute="trailing" id="KOK-ME-bdW"/>
-                            <constraint firstAttribute="bottom" secondItem="EFu-hM-tWh" secondAttribute="bottom" constant="271" id="OmF-29-EOm"/>
+                            <constraint firstAttribute="bottom" secondItem="EFu-hM-tWh" secondAttribute="bottom" id="OmF-29-EOm"/>
                             <constraint firstItem="b8X-zn-4k9" firstAttribute="top" secondItem="5gQ-Oa-DZG" secondAttribute="bottom" constant="8" id="Q9u-HM-dhH"/>
                             <constraint firstItem="QP1-jy-n9d" firstAttribute="centerY" secondItem="b8X-zn-4k9" secondAttribute="centerY" id="aOO-a7-wvz"/>
                             <constraint firstAttribute="trailing" secondItem="EFu-hM-tWh" secondAttribute="trailing" id="eOR-h6-SCN"/>
@@ -311,7 +311,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="fdC-CJ-fPy" id="8dS-o8-bkN"/>
                                                 </connections>
@@ -322,7 +322,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="fdC-CJ-fPy" id="6m9-wQ-Hbt"/>
                                                 </connections>
@@ -338,7 +338,7 @@
                                                 </constraints>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="fdC-CJ-fPy" id="YFs-90-aDy"/>
                                                 </connections>
@@ -359,6 +359,7 @@
                                             </textView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="9d1-BZ-31e" firstAttribute="leading" secondItem="hjw-9V-Oda" secondAttribute="leading" constant="15" id="1u4-ga-oFa"/>
                                             <constraint firstItem="ouh-2n-q1K" firstAttribute="leading" secondItem="hjw-9V-Oda" secondAttribute="leading" constant="15" id="Dis-0K-xtv"/>
@@ -382,6 +383,9 @@
                                             <constraint firstItem="fGD-eT-2Iu" firstAttribute="top" secondItem="j88-UZ-5V1" secondAttribute="bottom" constant="8" id="vvD-qR-HpD"/>
                                             <constraint firstItem="0yB-8O-oSp" firstAttribute="top" secondItem="hjw-9V-Oda" secondAttribute="top" constant="8" id="xRW-pc-sec"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="2hw-Fl-3fA" appends="YES" id="Cjb-sC-ppC"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -391,6 +395,9 @@
                                     <constraint firstItem="hjw-9V-Oda" firstAttribute="leading" secondItem="EgV-H2-l0f" secondAttribute="leading" id="L7D-K7-p4O"/>
                                     <constraint firstItem="hjw-9V-Oda" firstAttribute="top" secondItem="EgV-H2-l0f" secondAttribute="top" id="rgb-dD-dxM"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="fdC-CJ-fPy" id="6XZ-s0-Orf"/>
+                                </connections>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MiZ-HJ-gzh">
                                 <subviews>
@@ -439,13 +446,23 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cuisineTextField" destination="9d1-BZ-31e" id="BWc-SZ-IXb"/>
+                        <outlet property="descriptionTextView" destination="fGD-eT-2Iu" id="IKv-6l-lkq"/>
+                        <outlet property="doneButtonBottomConstrain" destination="ZJz-Ij-gIi" id="Vmt-Ww-7rM"/>
                         <outlet property="nameTextField" destination="CQU-nQ-uqB" id="QV1-q9-m70"/>
+                        <outlet property="naviBar" destination="MiZ-HJ-gzh" id="ACg-sP-qc5"/>
                         <outlet property="nextButton" destination="7YO-JR-mb4" id="8b8-8S-Ghg"/>
+                        <outlet property="priceTextField" destination="ouh-2n-q1K" id="ptd-6z-vZx"/>
                         <outlet property="scrollView" destination="EgV-H2-l0f" id="wke-Hr-gA4"/>
-                        <outlet property="topConstrain" destination="xRW-pc-sec" id="tWg-2V-sto"/>
+                        <outlet property="topConstrain" destination="dvy-vF-qam" id="iVL-Mu-iIS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oF6-0J-oAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="2hw-Fl-3fA">
+                    <connections>
+                        <action selector="didTapOnOview:" destination="fdC-CJ-fPy" id="scy-wa-ZoZ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2980" y="121.88905547226388"/>
         </scene>
@@ -848,7 +865,7 @@
             <objects>
                 <navigationController storyboardIdentifier="ViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="v8R-Gs-XkG" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="08l-UQ-UGH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="08l-UQ-UGH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
