@@ -22,4 +22,7 @@ NSString *const kPAItemCappedNameKey                     = @"itemCappedName";
 
 NSString *const kPACuisineClassNameKey                     = @"cuisines";
 NSString *const kPARestaurantClassNameKey                = @"restaurants";
+
+NSString *const kPARestaurantCappedNameKey                = @"restaurantCappedName";
+
 @end

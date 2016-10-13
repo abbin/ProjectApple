@@ -17,6 +17,7 @@
 @dynamic restaurantLocation;
 @dynamic restaurantPhoneNumbers;
 @dynamic restaurantWorkingHours;
+@dynamic restaurantCappedName;
 
 + (void)load {
     [self registerSubclass];
@@ -30,6 +31,13 @@
     PARestaurant *restObj = [PARestaurant object];
     
     restObj.restaurantName = name;
+    
+    NSArray* words = [name componentsSeparatedByCharactersInSet :[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString* trimmedString = [words componentsJoinedByString:@""];
+    NSString *lowString = [trimmedString lowercaseString];
+    
+    restObj.restaurantCappedName = lowString;
+    
     restObj.restaurantAddress = address;
     restObj.restaurantLocation = [PFGeoPoint geoPointWithLatitude:coordinate.latitude longitude:coordinate.longitude];
     if (phoneNumber.count>0) {
@@ -50,8 +58,16 @@
     
     @try {
         restObj.restaurantName = [dictionary objectForKey:@"name"];
+        
+        NSArray* words = [restObj.restaurantName componentsSeparatedByCharactersInSet :[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        NSString* trimmedString = [words componentsJoinedByString:@""];
+        NSString *lowString = [trimmedString lowercaseString];
+        
+        restObj.restaurantCappedName = lowString;
+        
     } @catch (NSException *exception) {
         restObj.restaurantName = @"";
+        restObj.restaurantCappedName = @"";
     }
     
     @try {

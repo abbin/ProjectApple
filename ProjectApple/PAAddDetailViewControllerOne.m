@@ -157,6 +157,18 @@
             self.topConstrain.constant = -190;
         }
     }
+    else if (IS_IPHONE_6){
+        if (textField.tag == 0) {
+            self.topConstrain.constant = 0;
+        }
+        else if (textField.tag == 1) {
+            self.topConstrain.constant = 0;
+        }
+        else if (textField.tag == 2){
+            self.topConstrain.constant = -50;
+        }
+    }
+    
     if (textField.tag == 1) {
         if ([textField.text isEqualToString:@""]) {
             textField.text = [[NSLocale currentLocale] objectForKey:NSLocaleCurrencySymbol];
@@ -216,7 +228,13 @@
         self.topConstrain.constant = -285;
     }
     else if (IS_IPHONE_5){
-        self.topConstrain.constant = -285;
+        self.topConstrain.constant = -210;
+    }
+    else if (IS_IPHONE_6){
+        self.topConstrain.constant = -130;
+    }
+    else if (IS_IPHONE_6P){
+        self.topConstrain.constant = -90;
     }
     
     [UIView animateWithDuration:0.3 animations:^{
@@ -245,6 +263,7 @@
     NSString* name = [self.nameTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString* price = [self.priceTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString* cuisine = [self.cuisineTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString* descript = [self.descriptionTextView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
     if (name.length == 0) {
         
@@ -256,7 +275,29 @@
         
     }
     else{
+        PACuisine *cuisineObj = [PACuisine object];
+        cuisineObj.cuisineName = cuisine;
+        
+        NSArray* words = [cuisine componentsSeparatedByCharactersInSet :[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        NSString* trimmedString = [words componentsJoinedByString:@""];
+        NSString *lowString = [trimmedString lowercaseString];
+        
+        cuisineObj.cuisineCappedName = lowString;
+        
         PAAddViewControllerTwo * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PAAddViewControllerTwo"];
+       
+        PAItem *newItem = [PAItem object];
+        newItem.itemName = name;
+        newItem.itemCuisine = cuisineObj;
+        newItem.itemPrice = [NSNumber numberWithInteger:[price integerValue]];
+        
+        if (self.descriptionTextView.text.length>0) {
+            newItem.itemDescription = descript;
+        }
+        
+        vc.item = newItem;
+        vc.images = self.images;
+        
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

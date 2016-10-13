@@ -33,4 +33,5 @@ FOUNDATION_EXPORT NSString *const kPAItemsClassNameKey;
 FOUNDATION_EXPORT NSString *const kPAItemCappedNameKey;
 FOUNDATION_EXPORT NSString *const kPACuisineClassNameKey;
 FOUNDATION_EXPORT NSString *const kPARestaurantClassNameKey;
+FOUNDATION_EXPORT NSString *const kPARestaurantCappedNameKey;
 @end

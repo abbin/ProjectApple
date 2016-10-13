@@ -13,6 +13,7 @@
 + (NSString *)parseClassName;
 
 @property (strong, nonatomic) NSString *restaurantName;
+@property (strong, nonatomic) NSString *restaurantCappedName;
 @property (strong, nonatomic) NSString *restaurantAddress;
 @property (strong, nonatomic) PFGeoPoint *restaurantLocation;
 @property (strong, nonatomic) NSMutableArray *restaurantPhoneNumbers;

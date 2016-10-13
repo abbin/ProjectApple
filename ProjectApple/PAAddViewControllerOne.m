@@ -32,11 +32,12 @@
     [super viewDidLoad];
     [self.navigationController.interactivePopGestureRecognizer setDelegate:self];
     
-#if DEBUG
     self.query = [PFQuery queryWithClassName:kPAItemsClassNameKey];
+    
+#if DEBUG
+    self.query.cachePolicy = kPFCachePolicyCacheElseNetwork;
 #endif
     
-    self.query.cachePolicy = kPFCachePolicyCacheElseNetwork;
     self.tableViewHeightConstrain.constant = 0;
     
     if (IS_IPHONE_4_OR_LESS) {
@@ -195,7 +196,7 @@
     [self.query cancel];
     
     if (sender.text.length > 0) {
-        NSArray* words = [self.nameTextField.text componentsSeparatedByCharactersInSet :[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        NSArray* words = [sender.text componentsSeparatedByCharactersInSet :[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         NSString* trimmedString = [words componentsJoinedByString:@""];
         NSString *lowString = [trimmedString lowercaseString];
         

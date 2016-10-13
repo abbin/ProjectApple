@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PAItem.h"
 
 @interface PAAddViewControllerTwo : UIViewController
+
+@property (nonatomic, strong) PAItem *item;
+@property (nonatomic, strong) NSMutableArray *images;
 
 @end
